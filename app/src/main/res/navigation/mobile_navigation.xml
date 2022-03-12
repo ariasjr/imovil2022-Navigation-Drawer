@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_ejercicio1">
+
+    <fragment
+        android:id="@+id/nav_ejercicio1"
+        android:name="es.imovil.fcrtrainer.ui.codes.ejercicio1.Exercice1Fragment"
+        android:label="@string/menu_ejercicio1"
+        tools:layout="@layout/fragment_exercice1" />
+
+    <fragment
+        android:id="@+id/nav_ejercicio2"
+        android:name="es.imovil.fcrtrainer.ui.codes.ejercicio2.Exercice2Fragment"
+        android:label="@string/menu_ejercicio2"
+        tools:layout="@layout/fragment_exercice2" />
+
+    <fragment
+        android:id="@+id/nav_ejercicioN"
+        android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
+        android:label="@string/menu_ejercicioN"
+        tools:layout="@layout/fragment_exerciceN" />
+</navigation>

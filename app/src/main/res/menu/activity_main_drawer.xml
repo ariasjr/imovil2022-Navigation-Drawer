@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/codes">
+        <menu>
+            <item
+                android:id="@+id/nav_ejercicio1"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/menu_ejercicio1" />
+            <item
+                android:id="@+id/nav_ejercicio2"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/menu_ejercicio2" />
+
+        </menu>
+    </item>
+    <item android:title="@string/digital_systems">
+        <menu>
+            <item
+                android:id="@+id/nav_ejercicioN"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/menu_ejercicioN" />
+
+
+        </menu>
+    </item>
+    <item android:title="@string/network"/>
+
+
+</menu>
