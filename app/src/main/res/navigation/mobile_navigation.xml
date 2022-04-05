@@ -21,5 +21,10 @@
         android:id="@+id/nav_ejercicioN"
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
         android:label="@string/menu_ejercicioN"
-        tools:layout="@layout/fragment_exerciceN" />
+        tools:layout="@layout/fragment_exercice4" />
+    <fragment
+        android:id="@+id/nav_signed_magnitude"
+        android:name="es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeFragment"
+        android:label="@string/menu_signed_magnitude"
+        tools:layout="@layout/fragment_signed_magnitude" />
 </navigation>
