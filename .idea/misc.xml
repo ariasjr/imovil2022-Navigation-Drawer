@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/ic_menu_logic_operations.xml" value="0.144" />
+        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_LogicOperations.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice1.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice4.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_logic_operations.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/menu/activity_main_drawer.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.196" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable/ic_codes_binary.xml" value="0.298" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />
