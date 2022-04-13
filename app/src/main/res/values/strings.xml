@@ -16,6 +16,8 @@
     <string name="check">Comprobar</string>
     <string name="solution">Solución</string>
     <string name="swap">Cambiar</string>
+    <string name="convert_bin_to_hex">Convierte de binario con %1$d bits a hexadecimal</string>
+    <string name="convert_hex_to_bin">Convierte de hexadecimal a binario con %1$d bits</string>
 
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
