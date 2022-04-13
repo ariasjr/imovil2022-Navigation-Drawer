@@ -12,6 +12,9 @@
     <string name="menu_ejercicioN">EjercicioN</string>
 
     <string name="menu_hexadecimal">Hexadecimal</string>
+    <string name="check">Comprobar</string>
+    <string name="solution">Solución</string>
+    <string name="swap">Cambiar</string>
 
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>

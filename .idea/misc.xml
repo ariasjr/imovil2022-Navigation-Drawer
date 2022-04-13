@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2153846153846154" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.196" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable/ic_codes_binary.xml" value="0.298" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />
@@ -23,6 +24,7 @@
         <entry key="app/src/main/res/layout/fragment_exercice1.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/fragment_exercice2.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/fragment_hexadecimal.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/hexadecimal_keyoard.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/menu/main.xml" value="0.19010416666666666" />
