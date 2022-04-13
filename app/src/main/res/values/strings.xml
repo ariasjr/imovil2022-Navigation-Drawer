@@ -11,6 +11,8 @@
     <string name="menu_ejercicio2">Ejercicio2</string>
     <string name="menu_ejercicioN">EjercicioN</string>
 
+    <string name="menu_hexadecimal">Hexadecimal</string>
+
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
