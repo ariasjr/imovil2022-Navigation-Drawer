@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_exercice2" />
 
     <fragment
+        android:id="@+id/nav_hexadecimal"
+        android:name="es.imovil.fcrtrainer.ui.codes.hexadecimal.HexadecimalFragment"
+        android:label="@string/menu_hexadecimal"
+        tools:layout="@layout/fragment_hexadecimal" />
+
+    <fragment
         android:id="@+id/nav_ejercicioN"
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
         android:label="@string/menu_ejercicioN"

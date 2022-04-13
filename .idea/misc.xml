@@ -39,6 +39,16 @@
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/nav_header_main.xml" value="0.35688405797101447" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.198" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_exercice1.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_exercice2.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_hexadecimal.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.19010416666666666" />
       </map>
     </option>
   </component>
