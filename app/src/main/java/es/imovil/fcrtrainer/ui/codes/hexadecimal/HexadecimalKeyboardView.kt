@@ -2,24 +2,21 @@ package es.imovil.fcrtrainer.ui.codes.hexadecimal
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import es.imovil.fcrtrainer.R
+import kotlin.math.max
+import kotlin.math.min
 
 class HexadecimalKeyboardView(context: Context?, attributeSet: AttributeSet) : LinearLayout(context, attributeSet), View.OnClickListener {
 
     private var mEditText: EditText? = null // this receives the keystrokes
 
-    private fun getLayoutId(context: Context, attrs: AttributeSet): Int {
+    private fun getLayoutId(): Int {
         return R.layout.hexadecimal_keyoard
-    }
-
-    fun assignEditText(textView: EditText?) {
-        mEditText = textView
     }
 
     override fun onClick(view: View?) {
@@ -35,11 +32,11 @@ class HexadecimalKeyboardView(context: Context?, attributeSet: AttributeSet) : L
         val keyPressed = button.text
         val start = mEditText!!.selectionStart
         val end = mEditText!!.selectionEnd
-        val realStart = Math.min(start, end)
-        val realEnd = Math.max(start, end)
+        val realStart = min(start, end)
+        val realEnd = max(start, end)
         val text = mEditText!!.editableText
         if (button.id == R.id.key_delete) {
-            if (text.length <= 0 || realStart - 1 < 0) return
+            if (text.isEmpty() || realStart - 1 < 0) return
             if (start == end) {
                 text.delete(start - 1, start)
             } else {
@@ -58,10 +55,10 @@ class HexadecimalKeyboardView(context: Context?, attributeSet: AttributeSet) : L
     }
 
     init {
-        val layoutId = context?.let { getLayoutId(it, attributeSet) }
+        val layoutId = getLayoutId()
         val inflater = context
             ?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val rootView = layoutId?.let { inflater.inflate(it, this, true) }
+        val rootView = layoutId.let { inflater.inflate(it, this, true) }
         if (!isInEditMode) {
             val allButtons = rootView?.touchables
             if (allButtons != null) {
@@ -70,7 +67,7 @@ class HexadecimalKeyboardView(context: Context?, attributeSet: AttributeSet) : L
                 }
             }
             if (rootView != null) {
-                (rootView.findViewById<View>(R.id.key_delete) as Button).text = HexadecimalKeyboardView.delChar
+                (rootView.findViewById<View>(R.id.key_delete) as Button).text = delChar
             }
         }
     }

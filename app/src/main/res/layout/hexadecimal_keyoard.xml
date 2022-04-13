@@ -101,12 +101,14 @@
             android:visibility="invisible" />
 
         <Button
-            style="@style/key_control"
-            android:text="-" />
+            style="@style/key_hexadecimal"
+            android:text="P"
+            android:visibility="invisible" />
 
         <Button
-            style="@style/key_control"
-            android:text="." />
+            style="@style/key_hexadecimal"
+            android:text="P"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/key_delete"
