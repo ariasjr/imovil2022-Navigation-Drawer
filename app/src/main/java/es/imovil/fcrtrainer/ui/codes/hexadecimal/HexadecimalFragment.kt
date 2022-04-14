@@ -1,9 +1,12 @@
 package es.imovil.fcrtrainer.ui.codes.hexadecimal
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
@@ -13,10 +16,12 @@ import kotlin.random.Random
 
 class HexadecimalFragment : Fragment() {
     private var mNumberToConvert = 0
-    private var mDirectConversion = true
-    private val mRandomGenerator = Random(1024)
+    private var mDirectConversion = false
+    private val mRandomGenerator = Random(9999999999)
 
     private var _binding: FragmentHexadecimalBinding? = null
+
+
 
     private val binding get() = _binding!!
 
@@ -31,9 +36,35 @@ class HexadecimalFragment : Fragment() {
         _binding = FragmentHexadecimalBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        //val textView: TextView = binding.textGallery
+        val textView: TextView = binding.target
+        val title: TextView = binding.hexTitle
+        val solutionTextView: TextView = binding.solutionText
+        val swapButton: Button = binding.change
+        val checkButton: Button = binding.checkbutton
+        val solutionButton: Button = binding.solution
+        val answer: TextView = binding.textViewAnswer
         galleryViewModel.text.observe(viewLifecycleOwner) {
-            //textView.text = it
+            textView.text = generateRandomNumber()
+            title.text = titleString()
+            swapButton.setOnClickListener{
+                mDirectConversion = !mDirectConversion
+                textView.text = generateRandomNumber()
+                title.text = titleString()
+                answer.text = ""
+            }
+            checkButton.setOnClickListener {
+                if (isCorrect(answer.text.toString())){
+                    Log.i("Respuesta", "Correcta")
+                    textView.text = generateRandomNumber()
+                    answer.text = ""
+                } else {
+                    Log.i("Respuesta", "Incorrecta")
+                }
+            }
+            solutionButton.setOnClickListener {
+                solutionTextView.text = resources.getString(R.string.solution) + ": " + obtainSolution()
+            }
+
         }
         if (savedInstanceState != null) {
             mNumberToConvert = savedInstanceState.getInt(STATE_NUMBER_TO_CONVERT)
@@ -57,8 +88,7 @@ class HexadecimalFragment : Fragment() {
         } else {
             R.string.convert_hex_to_bin
         }
-        val formatString: String = resources.getString(formatStringId)
-        return java.lang.String.format(formatString, numberOfBits())
+        return resources.getString(formatStringId)
     }
 
     private fun numberOfBits(): Double {
@@ -66,10 +96,15 @@ class HexadecimalFragment : Fragment() {
     }
 
     private fun obtainSolution(): String {
-        return Integer.toHexString(mNumberToConvert).uppercase()
+        if (mDirectConversion) {
+            return Integer.toHexString(mNumberToConvert).uppercase()
+        } else {
+            return Integer.toBinaryString(mNumberToConvert).uppercase()
+        }
+
     }
 
-    fun generateRandomNumber(): String {
+    private fun generateRandomNumber(): String {
         val maxNumberToConvert = 2.0.pow(numberOfBits()).toInt()
         mNumberToConvert = mRandomGenerator.nextInt(maxNumberToConvert)
         return if (mDirectConversion) {
@@ -79,7 +114,7 @@ class HexadecimalFragment : Fragment() {
         }
     }
 
-    fun isCorrect(answer: String): Boolean {
+    private fun isCorrect(answer: String): Boolean {
         return obtainSolution() == answer.uppercase()
     }
 
