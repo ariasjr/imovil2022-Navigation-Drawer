@@ -51,12 +51,14 @@ class HexadecimalFragment : Fragment() {
                 textView.text = generateRandomNumber()
                 title.text = titleString()
                 answer.text = ""
+                solutionTextView.text = ""
             }
             checkButton.setOnClickListener {
                 if (isCorrect(answer.text.toString())){
                     Log.i("Respuesta", "Correcta")
                     textView.text = generateRandomNumber()
                     answer.text = ""
+                    solutionTextView.text = ""
                 } else {
                     Log.i("Respuesta", "Incorrecta")
                 }
@@ -82,7 +84,7 @@ class HexadecimalFragment : Fragment() {
         outState.putInt(STATE_NUMBER_TO_CONVERT, mNumberToConvert)
     }
 
-    fun titleString(): String {
+    private fun titleString(): String {
         val formatStringId: Int = if (mDirectConversion) {
             R.string.convert_bin_to_hex
         } else {
@@ -96,10 +98,10 @@ class HexadecimalFragment : Fragment() {
     }
 
     private fun obtainSolution(): String {
-        if (mDirectConversion) {
-            return Integer.toHexString(mNumberToConvert).uppercase()
+        return if (mDirectConversion) {
+            Integer.toHexString(mNumberToConvert).uppercase()
         } else {
-            return Integer.toBinaryString(mNumberToConvert).uppercase()
+            Integer.toBinaryString(mNumberToConvert).uppercase()
         }
 
     }
@@ -120,9 +122,6 @@ class HexadecimalFragment : Fragment() {
 
     companion object {
         private const val STATE_NUMBER_TO_CONVERT = "mNumberToConvert"
-        fun newInstance(): HexadecimalFragment {
-            return HexadecimalFragment()
-        }
     }
 
 
