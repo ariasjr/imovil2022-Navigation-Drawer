@@ -16,7 +16,7 @@ import kotlin.random.Random
 
 class HexadecimalFragment : Fragment() {
     private var mNumberToConvert = 0
-    private var mDirectConversion = false
+    private var mDirectConversion = true
     private val mRandomGenerator = Random(9999999999)
 
     private var _binding: FragmentHexadecimalBinding? = null
@@ -84,7 +84,7 @@ class HexadecimalFragment : Fragment() {
         outState.putInt(STATE_NUMBER_TO_CONVERT, mNumberToConvert)
     }
 
-    private fun titleString(): String {
+    fun titleString(): String {
         val formatStringId: Int = if (mDirectConversion) {
             R.string.convert_bin_to_hex
         } else {
@@ -93,11 +93,11 @@ class HexadecimalFragment : Fragment() {
         return resources.getString(formatStringId)
     }
 
-    private fun numberOfBits(): Double {
+    fun numberOfBits(): Double {
         return 8.0
     }
 
-    private fun obtainSolution(): String {
+    fun obtainSolution(): String {
         return if (mDirectConversion) {
             Integer.toHexString(mNumberToConvert).uppercase()
         } else {
@@ -106,7 +106,7 @@ class HexadecimalFragment : Fragment() {
 
     }
 
-    private fun generateRandomNumber(): String {
+    fun generateRandomNumber(): String {
         val maxNumberToConvert = 2.0.pow(numberOfBits()).toInt()
         mNumberToConvert = mRandomGenerator.nextInt(maxNumberToConvert)
         return if (mDirectConversion) {
@@ -116,7 +116,7 @@ class HexadecimalFragment : Fragment() {
         }
     }
 
-    private fun isCorrect(answer: String): Boolean {
+    fun isCorrect(answer: String): Boolean {
         return obtainSolution() == answer.uppercase()
     }
 
