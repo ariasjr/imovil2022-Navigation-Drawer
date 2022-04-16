@@ -18,6 +18,8 @@
     <string name="swap">Cambiar</string>
     <string name="convert_bin_to_hex">Convierte de binario con 8 bits a hexadecimal</string>
     <string name="convert_hex_to_bin">Convierte de hexadecimal a binario con 8 bits</string>
+    <string name="hex_correct">Respuesta correcta</string>
+    <string name="hex_wrong">Respuesta incorrecta</string>
 
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
