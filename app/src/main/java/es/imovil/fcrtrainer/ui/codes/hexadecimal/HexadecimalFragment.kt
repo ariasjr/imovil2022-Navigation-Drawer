@@ -1,5 +1,6 @@
 package es.imovil.fcrtrainer.ui.codes.hexadecimal
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -22,7 +23,6 @@ class HexadecimalFragment : Fragment() {
     private var _binding: FragmentHexadecimalBinding? = null
 
 
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -43,6 +43,7 @@ class HexadecimalFragment : Fragment() {
         val checkButton: Button = binding.checkbutton
         val solutionButton: Button = binding.solution
         val answer: TextView = binding.textViewAnswer
+
         galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = generateRandomNumber()
             title.text = titleString()
@@ -54,13 +55,16 @@ class HexadecimalFragment : Fragment() {
                 solutionTextView.text = ""
             }
             checkButton.setOnClickListener {
+                val alertDialogBuilder = AlertDialog.Builder(it.context)
                 if (isCorrect(answer.text.toString())){
                     Log.i("Respuesta", "Correcta")
+                    alertDialogBuilder.setMessage(resources.getString(R.string.hex_correct)).show()
                     textView.text = generateRandomNumber()
                     answer.text = ""
                     solutionTextView.text = ""
                 } else {
-                    Log.i("Respuesta", "Incorrecta")
+                    alertDialogBuilder.setMessage(resources.getString(R.string.hex_wrong)).show()
+
                 }
             }
             solutionButton.setOnClickListener {
