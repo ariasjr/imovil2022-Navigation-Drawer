@@ -14,4 +14,17 @@
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
+
+    <!-- String layer exercise -->
+    <string name="layer_exercise">Layer exercise</string>
+    <string name="layer_title">Guess the layer</string>
+    <string name="application_layer">Application layer</string>
+    <string name="transport_layer">Transport layer</string>
+    <string name="internet_layer">Internet layer</string>
+    <string name="link_layer">Link layer</string>
+    <string name="button_layer">Check</string>
+    <string name="button_layer_solution">Solution</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
