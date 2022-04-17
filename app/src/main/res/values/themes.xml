@@ -33,6 +33,13 @@
         <item name="android:fontFamily" tools:ignore="NewApi">sans-serif</item>
     </style>
 
+    <style name="key_decimal" parent="@style/key">
+        <item name="android:background">@color/key_decimal_background</item>
+    </style>
+
+    <style name="key_hexadecimal" parent="@style/key">
+        <item name="android:background">@color/key_hexadecimal_background</item>
+    </style>
 
     <style name="key_control" parent="@style/key">
         <item name="android:background">@color/key_control_background</item>
