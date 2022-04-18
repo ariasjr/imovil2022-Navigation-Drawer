@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.databinding.FragmentLogicOperationsBinding
 import java.util.*
@@ -17,6 +18,7 @@ import kotlin.math.pow
 
 class LogicOperationsFragment : Fragment(){
 
+    val loViewModel:LogicOperationsViewModel by activityViewModels()
     private lateinit var num1:String
     private lateinit var num2:String
     private lateinit var solution:String
@@ -43,11 +45,15 @@ class LogicOperationsFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val loViewModel =
-            ViewModelProvider(this).get(LogicOperationsViewModel::class.java)
+
 
         _binding = FragmentLogicOperationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        num1=loViewModel.num1
+        num2=loViewModel.num2
+        operation=loViewModel.operation
+        solution=loViewModel.solution
 
         tv_n1=binding.tvN1
         tv_n2=binding.tvN2
@@ -64,8 +70,13 @@ class LogicOperationsFragment : Fragment(){
         b_check.setOnClickListener(){
             checkSolution(ed_solution.text.toString())
         }
-        createQuestion()
 
+        if(operation!="" && num1!="" && num2!=""){
+            restoreQuestion()
+        }
+        else {
+            createQuestion()
+        }
 
         return root
     }
@@ -73,6 +84,8 @@ class LogicOperationsFragment : Fragment(){
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+        saveQuestion()
     }
 
     private fun checkSolution(sol:String){
@@ -89,27 +102,48 @@ class LogicOperationsFragment : Fragment(){
         (ed_solution as TextView).text=obtainSolution()
     }
 
+    private fun saveQuestion(){
+        loViewModel.solution=solution
+        loViewModel.operation=operation
+        loViewModel.num1=num1
+        loViewModel.num2=num2
+
+        loViewModel.answer=ed_solution.text.toString()
+    }
+
     private fun createQuestion(){
-        val e1: String = randomBinary()
-        tv_n1.text=e1
+        num1= randomBinary()
+        tv_n1.text=num1
 
-        val e2: String = randomBinary()
-        tv_n2.text=e2
+        num2 = randomBinary()
+        tv_n2.text=num2
 
-        val op: String = randomOperation()
-        tv_operation.text=op
+        operation = randomOperation()
+        tv_operation.text=operation
 
-        val entrada1 = e1.toInt(2)
-        val entrada2 = e2.toInt(2)
+        val entrada1 = num1.toInt(2)
+        val entrada2 = num2.toInt(2)
         var result = 0
-        if (op == "AND") result = entrada1 and entrada2
-        else if (op == "OR") result = entrada1 or entrada2
-        else if (op == "XOR") result = entrada1 xor entrada2
+        if (operation == "AND") result = entrada1 and entrada2
+        else if (operation == "OR") result = entrada1 or entrada2
+        else if (operation == "XOR") result = entrada1 xor entrada2
 
         solution = Integer.toBinaryString(result)
         solution = completaNumeroBits(solution)
 
         (ed_solution as TextView).text=""
+    }
+
+    private fun restoreQuestion(){
+        solution=loViewModel.solution
+        operation=loViewModel.operation
+        num1=loViewModel.num1
+        num2=loViewModel.num2
+
+        tv_operation.text=operation
+        tv_n1.text=num1
+        tv_n2.text=num2
+        (ed_solution as TextView).text=loViewModel.answer
     }
 
     private fun obtainSolution():String{
