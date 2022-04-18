@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.databinding.FragmentSignedMagnitudeBinding
 import java.util.*
@@ -17,9 +18,12 @@ import kotlin.math.pow
 
 class SignedMagnitudeFragment : Fragment() {
 
+    //val smViewModel = ViewModelProvider(this).get(SignedMagnitudeViewModel::class.java)
+    val smViewModel: SignedMagnitudeViewModel by activityViewModels()
 
     lateinit var mCorrectAnswer:String
     lateinit var mNumberToConverString:String
+
     lateinit var mNumberToConvertTextSwitcher: TextView
     lateinit var mAnswerEditText:EditText
 
@@ -37,11 +41,12 @@ class SignedMagnitudeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val smViewModel =
-            ViewModelProvider(this).get(SignedMagnitudeViewModel::class.java)
 
         _binding = FragmentSignedMagnitudeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        mCorrectAnswer = smViewModel.solution
+        mNumberToConverString = smViewModel.number
 
         mAnswerEditText = binding.etAnswer
         val mCheckButton = binding.bComprobar
@@ -65,24 +70,44 @@ class SignedMagnitudeFragment : Fragment() {
         }
 
 
-        newQuestion()
+        if(isSavedContext()) restoreQuestion()
+        else newQuestion()
 
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        saveContext()
         _binding = null
     }
 
+    private fun saveContext(){
+        smViewModel.solution = mCorrectAnswer
+        smViewModel.number = mNumberToConverString
+        smViewModel.answer = mAnswerEditText.text.toString()
+    }
+
+    private fun isSavedContext():Boolean{
+        return (mCorrectAnswer != "")
+    }
+
     private fun generateRandomQuestion() {
-        mNumberToConverString = generateRandomNumber()
+        mNumberToConverString =  generateRandomNumber()
     }
 
     private fun newQuestion() {
         clearAnswer()
         generateRandomQuestion()
         mNumberToConvertTextSwitcher.text = mNumberToConverString
+    }
+
+    private fun restoreQuestion(){
+        mNumberToConverString = smViewModel.number
+        mNumberToConvertTextSwitcher.text = mNumberToConverString
+
+        mCorrectAnswer = smViewModel.solution
+        (mAnswerEditText as TextView).text = smViewModel.answer
     }
 
     private fun checkSolution(answer: String) {
@@ -105,7 +130,7 @@ class SignedMagnitudeFragment : Fragment() {
 
     private fun generateRandomNumber():String{
         val numberOfBitsMagnitude: Int = numberOfBits() - 1
-        val maxMagnitude = (2.0.pow(numberOfBitsMagnitude.toDouble()) - 1).toInt()
+        val maxMagnitude = (2.0.pow(numberOfBitsMagnitude.toDouble()-1 )).toInt()
         val randomNumber = mRandomGenerator.nextInt(maxMagnitude)
         val magnitudeDecimal = randomNumber.toString()
         val sign: Int = mRandomGenerator.nextInt(2) // it can be 0 or 1
@@ -117,11 +142,12 @@ class SignedMagnitudeFragment : Fragment() {
         val magnitudeBinary = Integer.toBinaryString(randomNumber).padStart(numberOfBitsMagnitude-1 , '0')
 
         if (mBinaryToDecimal) {
-            mCorrectAnswer = if (sign == 0) {
-                magnitudeDecimal
+            if (sign == 0) {
+                mCorrectAnswer = magnitudeDecimal
             } else {
-                "-$magnitudeDecimal"
+                mCorrectAnswer = "-$magnitudeDecimal"
             }
+
             return signAsString + magnitudeBinary
         } else {
             mCorrectAnswer = signAsString + magnitudeBinary

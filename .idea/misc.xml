@@ -3,24 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v21/ic_menu_codes1.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/ic_menu_signed_magnitud.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/side_nav_bar.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout-land/keyboard_full_panel.xml" value="0.22001763668430335" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/activity_main.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/app_bar_main.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/content_main.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice1.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice2.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice4.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_signed_magnitude.xml" value="0.33" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/nav_header_main.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/menu/activity_main_drawer.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/menu/main.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/UO271441/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_signed_magnitude.xml" value="0.25" />
+        <entry key="..\:/Users/UO271441/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/keyboard_full_panel.xml" value="0.1778115501519757" />
+        <entry key="..\:/Users/UO271441/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/keyborad_full_panel.xml" value="0.18" />
+        <entry key="..\:/Users/UO271441/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/signed_magnitude_keyboard.xml" value="0.22" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.196" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable/ic_codes_binary.xml" value="0.298" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />

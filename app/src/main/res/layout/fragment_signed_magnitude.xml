@@ -40,9 +40,10 @@
         android:text="Solucion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/b_comprobar"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toEndOf="@+id/b_comprobar"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer"
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/b_comprobar"
@@ -51,9 +52,10 @@
         android:text="Comprobar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_answer"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/b_inverso"
@@ -62,9 +64,20 @@
         android:text="Inverso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toEndOf="@+id/b_solucion"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeKeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_solucion"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintTop_toBottomOf="@+id/b_inverso"
+        app:layout_constraintVertical_bias="0.274" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
