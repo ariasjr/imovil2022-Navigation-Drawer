@@ -84,6 +84,8 @@ class BinarioFragment : Fragment() {
                         Timer("SettingUp", false).schedule(2000) { //Esperamos
                             removeImage() //Imageview desaparece a los 2 seg
                         }
+                        //Borramos el numero erroneo introducido:
+                        answer.text=""
                     }
 
                 }
