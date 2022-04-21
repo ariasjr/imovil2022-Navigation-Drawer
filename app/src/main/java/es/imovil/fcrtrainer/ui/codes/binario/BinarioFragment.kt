@@ -181,5 +181,14 @@ class BinarioFragment : Fragment() {
     }
 
 
+    fun setNumbertoConvert(param: Int){
+        mNumberToConvert= param;
+    }
+
+    fun changeMode(param: Boolean){
+        mDirectConversion=param;
+    }
+
+
 
 }
