@@ -21,4 +21,8 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("es.imovil.fcrtrainer", appContext.packageName)
     }
+    @Test
+    fun test(){
+
+    }
 }
