@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.3275" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/activity_main.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_hexadecimal.xml" value="0.1" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_logicgate.xml" value="0.4" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/hexadecimal_keyoard.xml" value="0.264" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/logicgate_keyboard.xml" value="0.33" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/logicgate_keyoard.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/nav_header_main.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/menu/activity_main_drawer.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/menu/main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.196" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable/ic_codes_binary.xml" value="0.298" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />

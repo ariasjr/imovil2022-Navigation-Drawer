@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingTop="4dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/and"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/and" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/nand"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/nand" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/or"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/or" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/nor"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/nor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/xor"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/xor" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/not"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/not" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/triestado"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/triestado" />
+
+        <!-- Placeholder for skipping one column -->
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:text="P"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/solucion"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/soluci_n" />
+
+    </LinearLayout>
+
+</LinearLayout>
