@@ -7,14 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
-import es.imovil.fcrtrainer.R
-import es.imovil.fcrtrainer.databinding.FragmentExercice4Binding
-import es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNViewModel
+
+import es.imovil.fcrtrainer.databinding.FragmentExerciceCircuitosDigitalesBinding
 
 
-class ExerciceCircuitosDigitalesFragment : Fragment() {
-    private var _binding: FragmentExercice4Binding? = null
+
+
+class FragmentExerciceCircuitosDigitales : Fragment() {
+    private var _binding: FragmentExerciceCircuitosDigitalesBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
     private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,9 +27,9 @@ class ExerciceCircuitosDigitalesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(ExerciceNViewModel::class.java)
+            ViewModelProvider(this).get(ExerciceCircuitosDigitalesViewModel::class.java)
 
-        _binding = FragmentExercice4Binding.inflate(inflater, container, false)
+        _binding = FragmentExerciceCircuitosDigitalesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textSlideshow

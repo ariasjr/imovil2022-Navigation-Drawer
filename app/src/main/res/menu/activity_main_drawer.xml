@@ -22,7 +22,10 @@
                 android:id="@+id/nav_ejercicioN"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="@string/menu_ejercicioN" />
-
+            <item
+                android:id="@+id/nav_ejercicio_Circuitos_Digitales"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/menu_ejercicioCircuitosDigitales" />
 
         </menu>
     </item>
