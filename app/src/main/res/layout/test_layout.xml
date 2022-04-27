@@ -69,15 +69,14 @@ limitations under the License.
                     android:layout_height="wrap_content"
                     android:layout_weight="1.6"
                     >
-
                     <TextView
-                        android:id="@+id/tv_number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/mediumdarkgray"
                         android:gravity="center_horizontal"
                         android:text="0001"
-                        android:textColor="@color/mediumdarkgray"
-                        android:textSize="@dimen/normal_font"></TextView>
+                        android:textSize="@dimen/normal_font">
+                    </TextView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -136,9 +135,7 @@ limitations under the License.
                 android:layout_gravity="center" />
         </LinearLayout>
 
-        <include
-            layout="@layout/overlapped_info_window"
-            android:id="@+id/overlapped"/>
+        <include layout="@layout/overlapped_info_window" />
     </RelativeLayout>
 
 </ScrollView>

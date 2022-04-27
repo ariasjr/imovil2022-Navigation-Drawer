@@ -1,16 +1,21 @@
 package es.imovil.fcrtrainer.ui.codes.signed_magnitude
 
+import android.os.Build
 import android.os.Bundle
-import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
+import android.view.animation.AnticipateOvershootInterpolator
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextSwitcher
 import android.widget.TextView
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentSignedMagnitudeBinding
 import java.util.*
 import kotlin.math.pow
@@ -30,6 +35,13 @@ class SignedMagnitudeFragment : Fragment() {
     lateinit var mRandomGenerator:Random
     private var mBinaryToDecimal = true
 
+    lateinit var mTitleTextView: TextSwitcher
+
+    lateinit var mResult:View
+    lateinit var mResultImage:ImageView
+
+    private var mAntovershoot = AnticipateOvershootInterpolator()
+
     private var _binding: FragmentSignedMagnitudeBinding? = null
 
     // This property is only valid between onCreateView and
@@ -45,13 +57,20 @@ class SignedMagnitudeFragment : Fragment() {
         _binding = FragmentSignedMagnitudeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        mResult = binding.overlapped.result
+        mResultImage = binding.overlapped.resultimage
+
+        mTitleTextView = binding.exercisetitle
+        mTitleTextView.setInAnimation(context, R.anim.slide_in_right)
+        mTitleTextView.setOutAnimation(context, R.anim.slide_out_left)
+
         mCorrectAnswer = smViewModel.solution
         mNumberToConverString = smViewModel.number
 
-        mAnswerEditText = binding.etAnswer
-        val mCheckButton = binding.bComprobar
-        val mChangeDirectionButton = binding.bInverso
-        val mSolutionButton = binding.bSolucion
+        mAnswerEditText = binding.textViewAnswer
+        val mCheckButton = binding.checkbutton
+        val mChangeDirectionButton = binding.change
+        val mSolutionButton = binding.seesolution
         mNumberToConvertTextSwitcher = binding.tvNumber
 
         mRandomGenerator = Random()
@@ -62,6 +81,7 @@ class SignedMagnitudeFragment : Fragment() {
 
         mChangeDirectionButton.setOnClickListener {
                 mBinaryToDecimal = mBinaryToDecimal xor true
+                setTitle()
                 newQuestion()
         }
 
@@ -72,6 +92,8 @@ class SignedMagnitudeFragment : Fragment() {
 
         if(isSavedContext()) restoreQuestion()
         else newQuestion()
+
+        setTitle()
 
         return root
     }
@@ -112,10 +134,9 @@ class SignedMagnitudeFragment : Fragment() {
 
     private fun checkSolution(answer: String) {
         if (answer == "" || !isCorrect(answer)) {
-            Toast.makeText(context, "Respuesta INCORRECTA", Toast.LENGTH_SHORT).show()
+            showAnimationAnswer(false)
         } else {
-            // Correct answer
-            Toast.makeText(context, "Respuesta CORRECTA", Toast.LENGTH_SHORT).show()
+            showAnimationAnswer(true)
             newQuestion()
         }
     }
@@ -170,6 +191,45 @@ class SignedMagnitudeFragment : Fragment() {
 
     private fun numberOfBits(): Int {
         return 5
+    }
+
+    private fun setTitle() {
+        mTitleTextView.setText(titleString())
+    }
+
+    protected fun titleString(): String? {
+        val formatStringId: Int
+        formatStringId = if (mBinaryToDecimal) {
+            R.string.convert_dec_to_sign_and_magnitude
+        } else {
+            R.string.convert_sign_and_magnitude_to_dec
+        }
+        val formatString = resources.getString(formatStringId)
+        return String.format(formatString, numberOfBits())
+    }
+
+    protected fun showAnimationAnswer(correct: Boolean) {
+        // Fade in - fade out
+        mResult.visibility = View.VISIBLE
+        val animation = AlphaAnimation(0f, 1f)
+        animation.duration = 300
+        animation.fillBefore = true
+        animation.fillAfter = true
+        animation.repeatCount = Animation.RESTART
+        animation.repeatMode = Animation.REVERSE
+        mResult.startAnimation(animation)
+        var drawableId: Int = R.drawable.correct
+        if (!correct) {
+            drawableId = R.drawable.incorrect
+        }
+        mResultImage.setImageDrawable(ContextCompat.getDrawable(this.requireContext(), drawableId))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            mResultImage.animate().setDuration(300).setInterpolator(mAntovershoot)
+                .scaleX(1.5f).scaleY(1.5f)
+                .withEndAction(Runnable { // Back to its original size after the animation's end
+                    mResultImage.animate().scaleX(1f).scaleY(1f)
+                })
+        }
     }
 
 

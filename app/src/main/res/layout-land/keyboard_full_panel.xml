@@ -26,55 +26,7 @@ limitations under the License.
 
         <Button
             style="@style/key_decimal"
-            android:text="7" />
-
-        <Button
-            style="@style/key_decimal"
-            android:text="8" />
-
-        <Button
-            style="@style/key_decimal"
-            android:text="9" />
-
-        <Button
-            style="@style/key_hexadecimal"
-            android:text="E" />
-
-        <Button
-            style="@style/key_hexadecimal"
-            android:text="F" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            style="@style/key_decimal"
-            android:text="4" />
-
-        <Button
-            style="@style/key_decimal"
-            android:text="5" />
-
-        <Button
-            style="@style/key_decimal"
-            android:text="6" />
-
-        <Button
-            style="@style/key_hexadecimal"
-            android:text="C" />
-
-        <Button
-            style="@style/key_hexadecimal"
-            android:text="D" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+            android:text="0" />
 
         <Button
             style="@style/key_decimal"
@@ -89,12 +41,29 @@ limitations under the License.
             android:text="3" />
 
         <Button
-            style="@style/key_hexadecimal"
-            android:text="A" />
+            style="@style/key_decimal"
+            android:text="4" />
 
         <Button
-            style="@style/key_hexadecimal"
-            android:text="B" />
+            style="@style/key_decimal"
+            android:text="5" />
+
+        <Button
+            style="@style/key_decimal"
+            android:text="6" />
+
+        <Button
+            style="@style/key_decimal"
+            android:text="7" />
+
+        <Button
+            style="@style/key_decimal"
+            android:text="8" />
+
+        <Button
+            style="@style/key_decimal"
+            android:text="9" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -103,8 +72,28 @@ limitations under the License.
         android:orientation="horizontal" >
 
         <Button
-            style="@style/key_decimal"
-            android:text="0" />
+            style="@style/key_hexadecimal"
+            android:text="A" />
+
+        <Button
+            style="@style/key_hexadecimal"
+            android:text="B" />
+
+        <Button
+            style="@style/key_hexadecimal"
+            android:text="C" />
+
+        <Button
+            style="@style/key_hexadecimal"
+            android:text="D" />
+
+        <Button
+            style="@style/key_hexadecimal"
+            android:text="E" />
+
+        <Button
+            style="@style/key_hexadecimal"
+            android:text="F" />
 
         <!-- Placeholder for skipping one column -->
         <Button

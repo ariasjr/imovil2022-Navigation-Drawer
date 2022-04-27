@@ -15,4 +15,13 @@
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
+
+    <string name="error_no_clock">Error: este ejercicio no está preparado para jugar</string>
+    <string name="check">Comprobar</string>
+    <string name="solution">Solución</string>
+
+    <!--  Módulo: signo y magnitud -->
+    <string name="convert_sign_and_magnitude_to_dec">Convierte de decimal a signo-magnitud con %1$d bits</string>
+    <string name="convert_dec_to_sign_and_magnitude">Convierte de signo-magnitud con %1$d bits a decimal</string>
+
 </resources>
