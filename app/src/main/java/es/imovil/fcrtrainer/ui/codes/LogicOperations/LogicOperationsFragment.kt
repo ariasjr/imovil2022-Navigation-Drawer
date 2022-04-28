@@ -1,16 +1,18 @@
 package es.imovil.fcrtrainer.ui.codes.LogicOperations
 
+import es.imovil.fcrtrainer.R
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
+import android.view.animation.AnticipateOvershootInterpolator
+import android.widget.*
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.databinding.FragmentLogicOperationsBinding
 import java.util.*
 import kotlin.math.pow
@@ -31,6 +33,11 @@ class LogicOperationsFragment : Fragment(){
     private lateinit var b_check:Button
     private lateinit var b_solution:Button
 
+    lateinit var mResult:View
+    lateinit var mResultImage:ImageView
+    private var mAntovershoot=AnticipateOvershootInterpolator()
+
+
     lateinit var mRandomGenerator:Random
 
 
@@ -50,17 +57,20 @@ class LogicOperationsFragment : Fragment(){
         _binding = FragmentLogicOperationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        mResult=binding.overlap.result
+        mResultImage=binding.overlap.resultimage
+
         num1=loViewModel.num1
         num2=loViewModel.num2
         operation=loViewModel.operation
         solution=loViewModel.solution
 
-        tv_n1=binding.tvN1
-        tv_n2=binding.tvN2
-        b_check=binding.bCheck
-        b_solution=binding.bSolution
-        ed_solution=binding.input
-        tv_operation=binding.tvOperation
+        tv_n1=binding.LOentrada1
+        tv_n2=binding.LOentrada2
+        b_check=binding.LObCalcular
+        b_solution=binding.LObSolucion
+        ed_solution=binding.textViewAnswer
+        tv_operation=binding.LOoperacion
 
         mRandomGenerator= Random()
 
@@ -90,11 +100,35 @@ class LogicOperationsFragment : Fragment(){
 
     private fun checkSolution(sol:String){
         if(sol=="" || !isCorrect(sol)){
-            Toast.makeText(context,"No es correcto",Toast.LENGTH_SHORT).show()
+            showAnimationAnswer(false)
         }
         else{
-            Toast.makeText(context,"Correcto!!",Toast.LENGTH_SHORT).show()
+            showAnimationAnswer(true)
             createQuestion()
+        }
+    }
+
+    protected fun showAnimationAnswer(correct: Boolean) {
+        // Fade in - fade out
+        mResult.visibility = View.VISIBLE
+        val animation = AlphaAnimation(0F, 1F)
+        animation.duration = 300
+        animation.fillBefore = true
+        animation.fillAfter = true
+        animation.repeatCount = Animation.RESTART
+        animation.repeatMode = Animation.REVERSE
+        mResult.startAnimation(animation)
+        var drawableId: Int = R.drawable.correct
+        if (!correct) {
+            drawableId = R.drawable.incorrect
+        }
+        mResultImage.setImageDrawable(ContextCompat.getDrawable(this.requireContext(), drawableId))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            mResultImage.animate().setDuration(300).setInterpolator(mAntovershoot)
+                .scaleX(1.5f).scaleY(1.5f)
+                .withEndAction { // Back to its original size after the animation's end
+                    mResultImage.animate().scaleX(1f).scaleY(1f)
+                }
         }
     }
 

@@ -23,7 +23,7 @@ class LogicOperationsKeyboardView(context: Context?, attributeSet: AttributeSet)
         if (mEditText == null) {
             // No textView assigned. By default, we look for one with id answer
             val parent = parent as View
-            mEditText = parent.findViewById(R.id.input)
+            mEditText = parent.findViewById(R.id.text_view_answer)
             if (mEditText == null) { // not found
                 return
             }

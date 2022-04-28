@@ -15,4 +15,11 @@
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
+
+    <string name="error_no_clock">Error: este ejercicio no está preparado para jugar</string>
+    <string name="check">Comprobar</string>
+    <string name="solution">Solución</string>
+    <string name="LOpregunta">¿Cuál es la solución a esta operación lógica?</string>
+
+
 </resources>
