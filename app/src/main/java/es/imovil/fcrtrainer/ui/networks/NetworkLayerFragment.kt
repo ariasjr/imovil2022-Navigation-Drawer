@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import es.imovil.fcrtrainer.R
+import es.imovil.fcrtrainer.databinding.FragmentNetworkLayerBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +25,15 @@ class NetworkLayerFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentNetworkLayerBinding?=null
+    private val binding get()=_binding!!
+
+    private lateinit var rbLink:RadioButton
+    private lateinit var rbNetwork:RadioButton
+    private lateinit var rbTransport:RadioButton
+    private lateinit var rbApplication:RadioButton
+    private lateinit var rgOptions: RadioGroup
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +45,17 @@ class NetworkLayerFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_network_layer, container, false)
+        _binding= FragmentNetworkLayerBinding.inflate(inflater, container, false)
+
+
+
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
     }
 
     companion object {
