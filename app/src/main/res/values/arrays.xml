@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- arrays network layer -->
+    <string-array name="network_layer_answers">
+        <item>@string/application_layer</item>
+        <item>@string/transport_layer</item>
+        <item>@string/internet_layer</item>
+        <item>@string/link_layer</item>
+    </string-array>
+
+    <string-array name="network_layer_questions" translatable="false">
+        <item>IP</item>
+        <item>UDP</item>
+        <item>TCP</item>
+        <item>POP3</item>
+        <item>IMAP</item>
+        <item>ICMP</item>
+        <item>DNS</item>
+        <item>Ethernet</item>
+        <item>ARP</item>
+        <item>SSH</item>
+        <item>ICMP</item>
+    </string-array>
+</resources>

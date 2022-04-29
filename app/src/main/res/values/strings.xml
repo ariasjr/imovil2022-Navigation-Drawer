@@ -10,13 +10,14 @@
     <string name="menu_ejercicio1">Ejercicio1</string>
     <string name="menu_ejercicio2">Ejercicio2</string>
     <string name="menu_ejercicioN">EjercicioN</string>
+    <string name="menu_exercise_network_layer">Network Layer Exercise</string>
 
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
 
     <!-- String layer exercise -->
-    <string name="layer_exercise">Layer exercise</string>
+    <string name="layer_exercise">Network Layer</string>
     <string name="layer_title">Guess the layer</string>
     <string name="application_layer">Application layer</string>
     <string name="transport_layer">Transport layer</string>

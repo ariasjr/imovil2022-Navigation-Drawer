@@ -3,10 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.networks.NetworkLayerFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
+    tools:context=".ui.networks.networklayer.NetworkLayerFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,11 +28,10 @@
                 android:textSize="20sp" />
 
             <RadioGroup
-                android:id="@+id/grouplayer"
+                android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textlayer"
-                android:padding="10sp">
+                android:layout_below="@id/textlayer">
 
                 <RadioButton
                     android:id="@+id/application_layer"
