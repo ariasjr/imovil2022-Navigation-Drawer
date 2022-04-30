@@ -11,51 +11,53 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="@string/layer_title"
-            android:textSize="30sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/layer_title"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textlayer"
+                android:id="@+id/tvQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textlayer">
+                android:layout_below="@id/tvQuestion">
 
                 <RadioButton
-                    android:id="@+id/application_layer"
+                    android:id="@+id/rbApplication"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/application_layer"
                     android:textSize="20sp" />
 
                 <RadioButton
-                    android:id="@+id/transport_layer"
+                    android:id="@+id/rbTransport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/transport_layer"
                     android:textSize="20sp" />
 
                 <RadioButton
-                    android:id="@+id/internet_layer"
+                    android:id="@+id/rbInternet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/internet_layer"
                     android:textSize="20sp" />
 
                 <RadioButton
-                    android:id="@+id/link_layer"
+                    android:id="@+id/rbLink"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/link_layer"
@@ -69,14 +71,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_layer"
+                android:id="@+id/bCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/button_layer"/>
 
             <Button
-                android:id="@+id/buttonsolution_layer"
+                android:id="@+id/bSolution"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

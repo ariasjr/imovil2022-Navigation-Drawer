@@ -25,6 +25,7 @@
     <string name="link_layer">Link layer</string>
     <string name="button_layer">Check</string>
     <string name="button_layer_solution">Solution</string>
+    <string name="question_layer">¿A qué capa pertenece el protocolo </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

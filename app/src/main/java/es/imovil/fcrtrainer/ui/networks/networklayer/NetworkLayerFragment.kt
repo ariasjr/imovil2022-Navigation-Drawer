@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentNetworkLayerBinding
@@ -19,35 +16,61 @@ class NetworkLayerFragment : Fragment() {
 
     private var _binding: FragmentNetworkLayerBinding?=null
     private val binding get()=_binding!!
-    //private lateinit var arrayQuestions: Array<String>
-    //private lateinit var arrayAnswers: Array<String>
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    //Arrays
+    private lateinit var questions: Array<String>
+    private lateinit var answers: Array<String>
 
-        val homeViewModel = ViewModelProvider(this).get(NetworkLayerViewModel::class.java)
+    //Botton
+    private lateinit var bCheck: Button
+    private lateinit var bSolution: Button
 
-        // Inflate the layout for this fragment
+    //RadioGroup
+    private lateinit var rbApplication: RadioButton
+    private lateinit var rbTransport: RadioButton
+    private lateinit var rbInternet: RadioButton
+    private lateinit var rbLink: RadioButton
+
+    //Question
+    private lateinit var tvQuestion:TextView
+    private var nAnswer: Int = 0
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+
         _binding= FragmentNetworkLayerBinding.inflate(inflater, container, false)
         val root: View =binding.root
 
-        val textView: TextView = binding.textlayer
-        homeViewModel.text.observe(viewLifecycleOwner){
-            textView.text = it
-        }
+        bCheck=binding.bCheck
+        bSolution=binding.bSolution
 
-        /*
-        val rbApplication: RadioButton = binding.applicationLayer
-        val rbTransport: RadioButton = binding.transportLayer
-        val rbInternet: RadioButton = binding.internetLayer
-        val rbLink: RadioButton = binding.linkLayer
-        val rbGroup: RadioGroup = binding.radioGroup
-        val textViewLayer: TextView = binding.textlayer
-*/
-        //arrays
-        //arrayQuestions= resources.getStringArray(R.array.network_layer_questions)
-        //arrayAnswers=resources.getStringArray(R.array.network_layer_answers)
+        rbApplication=binding.rbApplication
+        rbTransport=binding.rbTransport
+        rbInternet=binding.rbInternet
+        rbLink=binding.rbLink
+        tvQuestion=binding.tvQuestion
+
+        questions= resources.getStringArray(R.array.network_layer_questions)
+        answers=resources.getStringArray(R.array.network_layer_answers)
+
+
+        val mRandomGenerator= Random.nextInt(11)
+        tvQuestion.text=resources.getString(R.string.question_layer)+" "+questions[mRandomGenerator]+"?"
+        //Toast.makeText(context,mRandomGenerator.toString() ,Toast.LENGTH_LONG).show()
+
 
         return root
+    }
+
+    fun checkSolution(view: View){
+        if(rbApplication.isChecked){
+            nAnswer=1
+
+
+        }
     }
 
     override fun onDestroyView() {
