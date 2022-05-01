@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../layout/custom_preview.xml" value="0.2153846153846154" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.196" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable/ic_codes_binary.xml" value="0.298" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />
@@ -28,6 +27,22 @@
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/menu/main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable-v21/ic_menu_codes1.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable/ic_correct.xml" value="0.1955" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout-land/fragment_binario.xml" value="0.21208112874779542" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/activity_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/app_bar_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/binary_keyboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/content_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_binario.xml" value="0.25" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_exercice1.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_exercice2.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_hexadecimal.xml" value="0.264" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/nav_header_main.xml" value="0.11302083333333333" />
       </map>
     </option>
   </component>

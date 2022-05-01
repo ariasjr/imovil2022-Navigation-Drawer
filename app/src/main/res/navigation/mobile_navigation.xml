@@ -28,4 +28,9 @@
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
         android:label="@string/menu_ejercicioN"
         tools:layout="@layout/fragment_exerciceN" />
+    <fragment
+        android:id="@+id/nav_ejercicioBinario"
+        android:name="es.imovil.fcrtrainer.ui.codes.binario.BinarioFragment"
+        android:label="@string/menu_binario"
+        tools:layout="@layout/fragment_binario" />
 </navigation>

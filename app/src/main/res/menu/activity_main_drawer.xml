@@ -17,6 +17,10 @@
                 android:id="@+id/nav_hexadecimal"
                 android:icon="@drawable/ic_menu_codes1"
                 android:title="@string/menu_hexadecimal" />
+            <item
+                android:id="@+id/nav_ejercicioBinario"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/menu_binario" />
 
         </menu>
     </item>
