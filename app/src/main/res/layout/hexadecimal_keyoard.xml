@@ -14,23 +14,28 @@
 
         <Button
             style="@style/key_decimal"
-            android:text="7" />
+            android:text="7"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_decimal"
-            android:text="8" />
+            android:text="8"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_decimal"
-            android:text="9" />
+            android:text="9"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_hexadecimal"
-            android:text="E" />
+            android:text="E"
+            app:backgroundTint="#4CAF50" />
 
         <Button
             style="@style/key_hexadecimal"
-            android:text="F" />
+            android:text="F"
+            app:backgroundTint="#4CAF50" />
     </LinearLayout>
 
     <LinearLayout
@@ -40,23 +45,28 @@
 
         <Button
             style="@style/key_decimal"
-            android:text="4" />
+            android:text="4"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_decimal"
-            android:text="5" />
+            android:text="5"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_decimal"
-            android:text="6" />
+            android:text="6"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_hexadecimal"
-            android:text="C" />
+            android:text="C"
+            app:backgroundTint="#4CAF50" />
 
         <Button
             style="@style/key_hexadecimal"
-            android:text="D" />
+            android:text="D"
+            app:backgroundTint="#4CAF50" />
     </LinearLayout>
 
     <LinearLayout
@@ -66,23 +76,28 @@
 
         <Button
             style="@style/key_decimal"
-            android:text="1" />
+            android:text="1"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_decimal"
-            android:text="2" />
+            android:text="2"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_decimal"
-            android:text="3" />
+            android:text="3"
+            app:backgroundTint="#2196F3" />
 
         <Button
             style="@style/key_hexadecimal"
-            android:text="A" />
+            android:text="A"
+            app:backgroundTint="#4CAF50" />
 
         <Button
             style="@style/key_hexadecimal"
-            android:text="B" />
+            android:text="B"
+            app:backgroundTint="#4CAF50" />
     </LinearLayout>
 
     <LinearLayout
@@ -92,7 +107,8 @@
 
         <Button
             style="@style/key_decimal"
-            android:text="0" />
+            android:text="0"
+            app:backgroundTint="#2196F3" />
 
         <!-- Placeholder for skipping one column -->
         <Button
@@ -113,7 +129,8 @@
         <Button
             android:id="@+id/key_delete"
             style="@style/key_control"
-            android:text="D" />
+            android:text="D"
+            app:backgroundTint="#B82D2D" />
 
     </LinearLayout>
 

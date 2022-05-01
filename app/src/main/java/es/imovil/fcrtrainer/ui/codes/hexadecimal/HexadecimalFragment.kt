@@ -19,9 +19,9 @@ class HexadecimalFragment : Fragment() {
     private var mNumberToConvert = 0
     private var mDirectConversion = true
     private val mRandomGenerator = Random(9999999999)
+    private val mNumberOfBits = 8.0
 
     private var _binding: FragmentHexadecimalBinding? = null
-
 
     private val binding get() = _binding!!
 
@@ -57,7 +57,6 @@ class HexadecimalFragment : Fragment() {
             checkButton.setOnClickListener {
                 val alertDialogBuilder = AlertDialog.Builder(it.context)
                 if (isCorrect(answer.text.toString())){
-                    Log.i("Respuesta", "Correcta")
                     alertDialogBuilder.setMessage(resources.getString(R.string.hex_correct)).show()
                     textView.text = generateRandomNumber()
                     answer.text = ""
@@ -98,7 +97,7 @@ class HexadecimalFragment : Fragment() {
     }
 
     fun numberOfBits(): Double {
-        return 8.0
+        return mNumberOfBits
     }
 
     fun obtainSolution(): String {
