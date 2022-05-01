@@ -25,6 +25,7 @@ class HexadecimalFragment : Fragment() {
 
     private val binding get() = _binding!!
 
+    // The function creates the fragment's view with the button listeners
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -87,6 +88,7 @@ class HexadecimalFragment : Fragment() {
         outState.putInt(STATE_NUMBER_TO_CONVERT, mNumberToConvert)
     }
 
+    // Function that returns the statement of the exercise depending on the mode
     fun titleString(): String {
         val formatStringId: Int = if (mDirectConversion) {
             R.string.convert_bin_to_hex
@@ -96,10 +98,12 @@ class HexadecimalFragment : Fragment() {
         return resources.getString(formatStringId)
     }
 
+    // Function that returns the number of bits with the game
     fun numberOfBits(): Double {
         return mNumberOfBits
     }
 
+    // Function that calculates the correct solution
     fun obtainSolution(): String {
         return if (mDirectConversion) {
             Integer.toHexString(mNumberToConvert).uppercase()
@@ -109,6 +113,7 @@ class HexadecimalFragment : Fragment() {
 
     }
 
+    // Function that generates the number to calculate
     fun generateRandomNumber(): String {
         val maxNumberToConvert = 2.0.pow(numberOfBits()).toInt()
         mNumberToConvert = mRandomGenerator.nextInt(maxNumberToConvert)
@@ -119,6 +124,7 @@ class HexadecimalFragment : Fragment() {
         }
     }
 
+    // Function that checks if the user input is a correct answer
     fun isCorrect(answer: String): Boolean {
         return obtainSolution() == answer.uppercase()
     }
