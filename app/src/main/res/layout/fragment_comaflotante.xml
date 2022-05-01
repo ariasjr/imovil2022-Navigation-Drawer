@@ -41,9 +41,9 @@
             </TextSwitcher>
 
             <LinearLayout
-                android:id="@+id/LinearLayoutInput"
+                android:id="@+id/LinearLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="67dp"
+                android:layout_height="30dp"
                 android:orientation="horizontal">
 
                 <TextSwitcher
@@ -54,10 +54,10 @@
 
                     <TextView
                         android:id="@+id/bin_target"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="411dp"
+                        android:layout_height="match_parent"
                         android:gravity="center_horizontal"
-                        android:text="0001"></TextView>
+                        android:text="1"></TextView>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -65,6 +65,13 @@
                         android:gravity="center_horizontal"
                         android:text="1"></TextView>
                 </TextSwitcher>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/bin_text_view_answer"
@@ -77,12 +84,38 @@
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:padding="10dp"
-                    tools:text="1" />
+                    tools:text="S" />
+
+                <EditText
+                    android:id="@+id/bin_text_view_answer2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    tools:text="Exp(8 bits)" />
+
+                <EditText
+                    android:id="@+id/bin_text_view_answer3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    tools:text="Mantisa(23 bits)" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="425dp">
 
                 <Button
                     android:id="@+id/checkbutton"
@@ -113,13 +146,13 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <es.imovil.fcrtrainer.ui.codes.binario.BinaryKeyboardView
+            <es.imovil.fcrtrainer.ui.codes.comaFlotante.ComaFlotanteKeyboardView
                 android:id="@+id/keyboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
-            </es.imovil.fcrtrainer.ui.codes.binario.BinaryKeyboardView>
+            </es.imovil.fcrtrainer.ui.codes.comaFlotante.ComaFlotanteKeyboardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

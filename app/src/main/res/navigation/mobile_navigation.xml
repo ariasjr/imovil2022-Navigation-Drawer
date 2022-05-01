@@ -21,10 +21,10 @@
         android:id="@+id/nav_ejercicioN"
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
         android:label="@string/menu_ejercicioN"
-        tools:layout="@layout/fragment_exerciceN" />
+        tools:layout="@layout/fragment_exercice4" />
     <fragment
         android:id="@+id/nav_ejercicioComaFlotante"
         android:name="es.imovil.fcrtrainer.ui.codes.comaFlotante.ComaFlotante"
-        android:label="@string/menu_comaflotante"
+        android:label="@string/menu_ejercicioComa"
         tools:layout="@layout/fragment_comaflotante" />
 </navigation>
