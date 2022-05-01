@@ -69,6 +69,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/decTo"
                 android:layout_width="match_parent"
                 android:layout_height="67dp"
                 android:orientation="horizontal">
@@ -112,6 +113,13 @@
                     android:padding="10dp"
                     tools:text="Mantisa(23 bits)" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/toDec"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal"
+                tools:visibility="invisible"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
