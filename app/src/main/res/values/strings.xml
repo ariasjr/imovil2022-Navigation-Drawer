@@ -14,4 +14,15 @@
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
+
+    <!--Coma flotante-->
+    <string name="menu_ejercicioComa">Coma Flotante</string>
+    <string name="check">Comprobar</string>
+    <string name="solution_button">Solución</string>
+    <string name="solution">Solución introducida</string>
+    <string name="swap">Cambiar</string>
+    <string name="convert_dec_to_iee">Convierte a formato IEE 754</string>
+    <string name="convert_iee_to_dec">Convierte de IEE 754 a decimal</string>
+    <string name="hex_correct">Respuesta correcta</string>
+    <string name="hex_wrong">Respuesta incorrecta</string>
 </resources>

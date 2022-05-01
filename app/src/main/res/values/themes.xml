@@ -22,4 +22,26 @@
     <style name="Theme.FCRTrainer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.FCRTrainer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="key">
+        <item name="android:layout_width">@dimen/key_size</item>
+        <item name="android:layout_height">@dimen/key_size</item>
+        <item name="android:textSize">@dimen/score_font</item>
+        <item name="android:textColor">@color/key</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif</item>
+    </style>
+
+    <style name="key_decimal" parent="@style/key">
+        <item name="android:background">@color/key_decimal_background</item>
+    </style>
+
+    <style name="key_hexadecimal" parent="@style/key">
+        <item name="android:background">@color/key_hexadecimal_background</item>
+    </style>
+
+    <style name="key_control" parent="@style/key">
+        <item name="android:background">@color/key_control_background</item>
+    </style>
 </resources>
