@@ -11,6 +11,13 @@
     <string name="menu_ejercicio2">Ejercicio2</string>
     <string name="menu_ejercicioN">EjercicioN</string>
 
+    <string name="menu_hexadecimal">Hexadecimal</string>
+    <string name="solution">Solución</string>
+    <string name="convert_bin_to_hex">Convierte de binario con 8 bits a hexadecimal</string>
+    <string name="convert_hex_to_bin">Convierte de hexadecimal a binario con 8 bits</string>
+    <string name="hex_correct">Respuesta correcta</string>
+    <string name="hex_wrong">Respuesta incorrecta</string>
+
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
@@ -20,10 +27,7 @@
     <string name="menu_binario">Binario</string>
     <string name="check">Comprobar</string>
     <string name="solution_button">Solución</string>
-    <string name="solution">Solución introducida</string>
     <string name="swap">Cambiar</string>
     <string name="convert_bin_to_dec">Convierte de binario a decimal</string>
     <string name="convert_dec_to_bin">Convierte de decimal a binario</string>
-    <string name="hex_correct">Respuesta correcta</string>
-    <string name="hex_wrong">Respuesta incorrecta</string>
 </resources>
