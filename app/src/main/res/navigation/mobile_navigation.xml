@@ -33,4 +33,11 @@
         android:name="es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeFragment"
         android:label="@string/menu_signed_magnitude"
         tools:layout="@layout/fragment_signed_magnitude" />
+
+    <fragment
+        android:id="@+id/nav_ejercicioBinario"
+        android:name="es.imovil.fcrtrainer.ui.codes.binario.BinarioFragment"
+        android:label="@string/menu_binario"
+        tools:layout="@layout/fragment_binario" />
+
 </navigation>
