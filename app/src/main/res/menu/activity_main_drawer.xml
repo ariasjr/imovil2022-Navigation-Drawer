@@ -35,6 +35,10 @@
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="@string/menu_ejercicioN" />
             <item
+                android:id="@+id/nav_logicgate"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/puerta_l_gica" />
+            <item
                 android:id="@+id/nav_logic_operations"
                 android:icon="@drawable/ic_menu_logic_operations"
                 android:title="@string/menu_logical_operations" />

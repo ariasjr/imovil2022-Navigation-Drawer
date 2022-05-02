@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:orientation="vertical">
+
+            <TextSwitcher
+                android:id="@+id/exercisetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/logicgate_title"
+                    android:layout_width="413dp"
+                    android:layout_height="40dp"
+                    android:textSize="16sp"
+                    tools:text="Exercise title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Exercise title" />
+            </TextSwitcher>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageLogicgate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/solution_text"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/and"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/and" />
+
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/nand"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/nand" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/or"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/or" />
+
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/nor"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/nor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/xor"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/xor" />
+
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/not"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/not" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/triestado"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/triestado" />
+
+                    <!-- Placeholder for skipping one column -->
+                    <Button
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:text="P"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/solucion"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="@string/soluci_n" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <ImageView
+                android:id="@+id/imageSolution"
+                android:layout_width="match_parent"
+                android:layout_height="153dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

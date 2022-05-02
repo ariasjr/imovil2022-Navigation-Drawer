@@ -28,6 +28,13 @@
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
         android:label="@string/menu_ejercicioN"
         tools:layout="@layout/fragment_exercice4" />
+
+    <fragment
+        android:id="@+id/nav_logicgate"
+        android:name="es.imovil.fcrtrainer.ui.digital.logicgate.LogicgateFragment"
+        android:label="@string/menu_hexadecimal"
+        tools:layout="@layout/fragment_logicgate" />
+        tools:layout="@layout/fragment_exercice4" />
     <fragment
         android:id="@+id/nav_logic_operations"
         android:name="es.imovil.fcrtrainer.ui.codes.LogicOperations.LogicOperationsFragment"
