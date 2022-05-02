@@ -22,6 +22,16 @@
     <string name="digital_systems">Digitales</string>
     <string name="network">Redes</string>
 
+    <string name="menu_logical_operations">Logical Operations</string>
+    <string name="error_no_clock">Error: este ejercicio no está preparado para jugar</string>
+    <string name="LOpregunta">¿Cuál es la solución a esta operación lógica?</string>
+
+    <string name="menu_signed_magnitude">Signed Magnitude</string>
+
+
+    <!--  Módulo: signo y magnitud -->
+    <string name="convert_sign_and_magnitude_to_dec">Convierte de decimal a signo-magnitud con %1$d bits</string>
+    <string name="convert_dec_to_sign_and_magnitude">Convierte de signo-magnitud con %1$d bits a decimal</string>
 
     <!--BINARIO:-->
     <string name="menu_binario">Binario</string>
@@ -30,4 +40,22 @@
     <string name="swap">Cambiar</string>
     <string name="convert_bin_to_dec">Convierte de binario a decimal</string>
     <string name="convert_dec_to_bin">Convierte de decimal a binario</string>
+
+    <string name="p">P</string>
+    <string name="or">OR</string>
+    <string name="not">NOT</string>
+    <string name="soluci_n">SOLUCIÓN</string>
+    <string name="xor">XOR</string>
+    <string name="nor">NOR</string>
+    <string name="and">AND</string>
+    <string name="triestado">TRIESTADO</string>
+    <string name="nand">NAND</string>
+    <string name="c">C</string>
+    <string name="a">A</string>
+    <string name="e">E</string>
+    <string name="puerta_l_gica">Puerta Lógica</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_num_hosts">Número de hosts</string>
+    <string name="title_num_hosts">Calcula el número de hosts de esta máscara de red</string>
 </resources>
