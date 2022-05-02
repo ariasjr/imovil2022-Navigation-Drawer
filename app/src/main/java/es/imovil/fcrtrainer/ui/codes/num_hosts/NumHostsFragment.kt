@@ -54,31 +54,32 @@ class NumHostsFragment : Fragment() {
             checkButton.setOnClickListener {
                 val alertDialogBuilder = AlertDialog.Builder(it.context)
                 if (isCorrect(answer.text.toString())){
-                    Log.i("Respuesta", "Correcta")
+                    //Log.i("Respuesta", "Correcta")
 
-                    textView.text = generateRandomNumber()
+                    //textView.text = generateRandomNumber()
+                    textView.text = intToIpString(generateRandomMask())
                     answer.text = ""
                     solutionTextView.text = ""
-                    //Resultado correcto, cambiamos el image view
+                    // Correct answer, changing ImageView
                     setImage(true)
                     if (resultImage != null) {
-                        //Ponemos en visible el image view
+                        // Visible
                         putImage()
-                        Timer("SettingUp", false).schedule(2000) { //Esperamos
-                            removeImage() //El image view desaparece a los 2 seg
+                        Timer("SettingUp", false).schedule(2000) { // Waiting
+                            removeImage() // ImageView disappears after 2s
                         }
                     }
 
                 } else {
-                    //Resultado incorrecto, image view lo refleja
+                    // Wrong answer
                     setImage(false)
                     if (resultImage != null) {
 
-                        putImage() // Ponemos e
-                        Timer("SettingUp", false).schedule(2000) { //Esperamos
-                            removeImage() //Imageview desaparece a los 2 seg
+                        putImage()
+                        Timer("SettingUp", false).schedule(2000) {
+                            removeImage()
                         }
-                        //Borramos el numero erroneo introducido:
+                        // Deleting wrong answer
                         answer.text=""
                     }
 
@@ -86,17 +87,17 @@ class NumHostsFragment : Fragment() {
             }
             solutionButton.setOnClickListener {
                 solutionTextView.text = resources.getString(R.string.solution)
-                answer.text=obtainSolution().toString()
+                answer.text = "1" // FIXME
+                //answer.text=obtainSolution().toString()
             }
 
         }
         if (savedInstanceState != null) {
-            mNumberToConvert = savedInstanceState.getInt(BinarioFragment.STATE_NUMBER_TO_CONVERT)
+            //mNumberToConvert = savedInstanceState.getInt(BinarioFragment.STATE_NUMBER_TO_CONVERT)  // FIXME
         }
 
 
         return binding.root
-        //return inflater.inflate(R.layout.num_hosts_fragment, container, false)
     }
 
     override fun onDestroyView() {
@@ -136,9 +137,7 @@ class NumHostsFragment : Fragment() {
         if (resultImage != null) {
             resultImage.visibility=View.VISIBLE
         }
-
     }
-
 
     fun removeImage(){
         val resultImage: ImageView? = binding.resultImageView
@@ -149,7 +148,7 @@ class NumHostsFragment : Fragment() {
 
     }
 
-    fun obtainSolution(): String {
+    /*fun obtainSolution(): String {
         return if (mDirectConversion) {
             mNumberToConvert.toString().uppercase()
         } else {
@@ -157,16 +156,10 @@ class NumHostsFragment : Fragment() {
             Integer.toBinaryString(mNumberToConvert).uppercase()
         }
 
-    }
+    }*/ // FIXME
 
     protected fun generateRandomMask(): Int {
-        //val level: Level = PreferenceUtils.getLevel(activity)
         var maxOffset = 8
-        /*when (level) {
-            BEGINNER -> maxOffset = 4
-            INTERMEDIATE -> maxOffset = 16
-            PROFICIENCY -> maxOffset = 26
-        }*/
 
         // Add 1 because 0 is not a valid mask
         val offset: Int = mRandom.nextInt(maxOffset) + 1
@@ -174,7 +167,8 @@ class NumHostsFragment : Fragment() {
     }
 
     fun isCorrect(answer: String): Boolean {
-        return obtainSolution() == answer.uppercase()
+        return true
+        //return obtainSolution() == answer.uppercase()  // FIXME
     }
 
     /*companion object {
@@ -183,7 +177,7 @@ class NumHostsFragment : Fragment() {
 
 
     fun setNumbertoConvert(param: Int){
-        mNumberToConvert= param;
+        //mNumberToConvert= param;  // FIXME
     }
 
 

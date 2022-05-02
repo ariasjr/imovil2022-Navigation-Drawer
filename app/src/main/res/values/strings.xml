@@ -30,4 +30,6 @@
     <string name="swap">Cambiar</string>
     <string name="convert_bin_to_dec">Convierte de binario a decimal</string>
     <string name="convert_dec_to_bin">Convierte de decimal a binario</string>
+    <string name="title_num_hosts">¿Cuántas máquinas podría haber en una red con esta máscara de subred?</string>
+    <string name="menu_num_hosts">Número de hosts</string>
 </resources>
