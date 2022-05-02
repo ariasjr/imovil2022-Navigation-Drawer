@@ -16,6 +16,7 @@ import es.imovil.fcrtrainer.databinding.NumHostsFragmentBinding
 import es.imovil.fcrtrainer.ui.codes.binario.BinarioFragment
 import java.util.*
 import kotlin.concurrent.schedule
+import kotlin.math.pow
 
 class NumHostsFragment : Fragment() {
 
@@ -50,6 +51,7 @@ class NumHostsFragment : Fragment() {
         val resultImage: ImageView? = binding.resultImageView
         galleryViewModel.text.observe(viewLifecycleOwner) {
             //textView.text = generateRandomNumber()
+            textView.text = intToIpString(generateRandomMask())
             //title.text = titleString()
             checkButton.setOnClickListener {
                 val alertDialogBuilder = AlertDialog.Builder(it.context)
@@ -87,13 +89,13 @@ class NumHostsFragment : Fragment() {
             }
             solutionButton.setOnClickListener {
                 solutionTextView.text = resources.getString(R.string.solution)
-                answer.text = "1" // FIXME
-                //answer.text=obtainSolution().toString()
+                //answer.text = "1"
+                answer.text=obtainSolution()
             }
 
         }
         if (savedInstanceState != null) {
-            //mNumberToConvert = savedInstanceState.getInt(BinarioFragment.STATE_NUMBER_TO_CONVERT)  // FIXME
+            mMask = savedInstanceState.getInt(STATE_MASK)
         }
 
 
@@ -105,7 +107,7 @@ class NumHostsFragment : Fragment() {
         _binding = null
     }
 
-    protected fun intToIpString(ipAddress: Int): String? {
+    fun intToIpString(ipAddress: Int): String? {
         val bytes = intArrayOf(
             ipAddress shr 24 and 0xff,
             ipAddress shr 16 and 0xff,
@@ -148,27 +150,34 @@ class NumHostsFragment : Fragment() {
 
     }
 
-    /*fun obtainSolution(): String {
-        return if (mDirectConversion) {
+    fun obtainSolution(): String {
+        return (-mMask-2).toInt().toString()
+        /*return if (mDirectConversion) {
             mNumberToConvert.toString().uppercase()
         } else {
 
             Integer.toBinaryString(mNumberToConvert).uppercase()
-        }
+        }*/
 
-    }*/ // FIXME
+    }
 
-    protected fun generateRandomMask(): Int {
-        var maxOffset = 8
+    fun generateRandomMask(): Int {
+        var maxOffset = 22
 
-        // Add 1 because 0 is not a valid mask
-        val offset: Int = mRandom.nextInt(maxOffset) + 1
-        return -0x1 shl offset
+        // Add 2 because 0 is not a valid mask
+        val offset: Int = mRandom.nextInt(maxOffset) + 2
+        Log.d("Offset", offset.toString())
+        //mMask = 0x7fffffff shl offset
+        val maximum : Long = 2.0.pow(32).toLong()-1
+        val offset_pow : Int = 2.0.pow(offset).toInt()-1
+        mMask = (maximum.toInt() - offset_pow).toInt()
+        Log.d("MaskFCR", mMask.toString())
+        return mMask
     }
 
     fun isCorrect(answer: String): Boolean {
-        return true
-        //return obtainSolution() == answer.uppercase()  // FIXME
+        //return true
+        return obtainSolution() == answer.uppercase()
     }
 
     /*companion object {
@@ -179,12 +188,5 @@ class NumHostsFragment : Fragment() {
     fun setNumbertoConvert(param: Int){
         //mNumberToConvert= param;  // FIXME
     }
-
-
-    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(NumHostsViewModel::class.java)
-        // TODO: Use the ViewModel
-    }*/
 
 }
