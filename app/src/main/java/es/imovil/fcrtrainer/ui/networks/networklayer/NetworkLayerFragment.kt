@@ -1,13 +1,11 @@
 package es.imovil.fcrtrainer.ui.networks.networklayer
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentNetworkLayerBinding
 import java.util.*
@@ -58,7 +56,6 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         val mRandomGenerator= Random.nextInt(10)
         tvQuestion.text=resources.getString(R.string.question_layer)+" "+questions[mRandomGenerator]+"?"
         protocol=questions[mRandomGenerator]
-        //Toast.makeText(context, protocol, Toast.LENGTH_LONG).show()
 
         radioGroup.setOnCheckedChangeListener(this)
 
@@ -73,35 +70,41 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
             else respuestaIncorrecta()
         }
 
+        bSolution.setOnClickListener {
+            if(resources.getStringArray(R.array.protocols_application).contains(protocol))
+                rbApplication.isSelected
+            else if(resources.getStringArray(R.array.protocols_transport).contains(protocol))
+                rbTransport.isSelected
+            else if(resources.getStringArray(R.array.protocols_internet).contains(protocol))
+                rbInternet.isSelected
+            else rbLink.isSelected
+        }
+
         return root
     }
 
     override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int) {
         when(idRadio){
-            rbApplication?.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_application)
-            rbTransport?.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_transport)
-            rbInternet?.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_internet)
-            rbLink?.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_link)
+            rbApplication.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_application)
+            rbTransport.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_transport)
+            rbInternet.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_internet)
+            rbLink.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_link)
         }
     }
 
-    fun respuestaCorrecta(){
+    private fun respuestaCorrecta(){
         setImage(true)
-        if (resultImage != null) { //Ponemos en visible el image view
-            putImage()
-            Timer("SettingUp", false).schedule(2000) { //Esperamos
-                removeImage() //El image view desaparece a los 2 seg
-            }
+        putImage()
+        Timer("SettingUp", false).schedule(2000) { //Esperamos
+            removeImage() //El image view desaparece a los 2 seg
         }
     }
 
-    fun respuestaIncorrecta(){ //Resultado incorrecto, image view lo refleja
+    private fun respuestaIncorrecta(){
         setImage(false)
-        if (resultImage != null) {
-            putImage() // Ponemos e
-            Timer("SettingUp", false).schedule(2000) { //Esperamos
-                removeImage() //Imageview desaparece a los 2 seg
-            }
+        putImage() // Ponemos e
+        Timer("SettingUp", false).schedule(2000) { //Esperamos
+            removeImage() //Imageview desaparece a los 2 seg
         }
     }
 
@@ -110,22 +113,21 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         _binding=null
     }
 
-    fun setImage(result:Boolean){
-        if(result) binding.resultImageView?.setImageResource(R.drawable.ic_correct)
-        else binding.resultImageView?.setImageResource(R.drawable.ic_incorrect)
+    private fun setImage(result:Boolean){
+        if(result) binding.resultImageView.setImageResource(R.drawable.ic_correct)
+        else binding.resultImageView.setImageResource(R.drawable.ic_incorrect)
     }
 
-    fun putImage(){
-        val resultImage: ImageView? = binding.resultImageView
-        if (resultImage != null) resultImage.visibility=View.VISIBLE
+    private fun putImage(){
+        val resultImage: ImageView = binding.resultImageView
+        resultImage.visibility=View.VISIBLE
     }
 
-    fun removeImage(){
-        val resultImage: ImageView? = binding.resultImageView
-        if (resultImage != null) {
-            resultImage.setImageResource(R.drawable.ic_correct)
-            resultImage.visibility=View.INVISIBLE
-        }
+    private fun removeImage(){
+        val resultImage: ImageView = binding.resultImageView
+        resultImage.setImageResource(R.drawable.ic_correct)
+        resultImage.visibility=View.INVISIBLE
+
     }
 
 }
