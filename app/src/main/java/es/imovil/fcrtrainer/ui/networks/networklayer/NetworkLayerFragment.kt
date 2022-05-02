@@ -21,7 +21,7 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
 
     private lateinit var questions: Array<String>
     private lateinit var answers: Array<String>
-    private lateinit var arrayPosiblesRespuestas: Array<String>
+    private lateinit var arrayPossibleAnswers: Array<String>
 
     private lateinit var bCheck: Button
     private lateinit var bSolution: Button
@@ -57,14 +57,14 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
             radioGroup.setOnCheckedChangeListener(this)
 
             bCheck.setOnClickListener {
-                if(arrayPosiblesRespuestas.contains(protocol)){
-                    respuestaCorrecta()
+                if(arrayPossibleAnswers.contains(protocol)){
+                    correctAnswer()
                     val x=Random.nextInt(10)
                     protocol=questions[x]
                     tvQuestion.text=resources.getString(R.string.question_layer)+" "+protocol+"?"
                     radioGroup.clearCheck()
                 }
-                else respuestaIncorrecta()
+                else incorrectAnswer()
             }
 
             bSolution.setOnClickListener {
@@ -89,14 +89,14 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         bCheck.isEnabled=true
 
         when(idRadio){
-            rbApplication.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_application)
-            rbTransport.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_transport)
-            rbInternet.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_internet)
-            rbLink.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_link)
+            rbApplication.id -> arrayPossibleAnswers=resources.getStringArray(R.array.protocols_application)
+            rbTransport.id -> arrayPossibleAnswers=resources.getStringArray(R.array.protocols_transport)
+            rbInternet.id -> arrayPossibleAnswers=resources.getStringArray(R.array.protocols_internet)
+            rbLink.id -> arrayPossibleAnswers=resources.getStringArray(R.array.protocols_link)
         }
     }
 
-    private fun respuestaCorrecta(){
+    private fun correctAnswer(){
         setImage(true)
         putImage()
         Timer("SettingUp", false).schedule(2000) { //Esperamos
@@ -104,7 +104,7 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         }
     }
 
-    private fun respuestaIncorrecta(){
+    private fun incorrectAnswer(){
         setImage(false)
         putImage() // Ponemos e
         Timer("SettingUp", false).schedule(2000) { //Esperamos

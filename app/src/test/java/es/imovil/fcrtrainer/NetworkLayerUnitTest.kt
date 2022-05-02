@@ -14,4 +14,8 @@ class NetworkLayerUnitTest {
 
     private var networkLayerFragment=NetworkLayerFragment()
 
+    @Test
+    fun prueba1(){
+
+    }
 }
