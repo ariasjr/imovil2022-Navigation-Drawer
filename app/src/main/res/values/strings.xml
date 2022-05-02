@@ -21,5 +21,25 @@
     <string name="solution">Solución</string>
     <string name="LOpregunta">¿Cuál es la solución a esta operación lógica?</string>
 
+    <string name="menu_signed_magnitude">Signed Magnitude</string>
+
+    <string name="menu_hexadecimal">Hexadecimal</string>
+    <string name="convert_bin_to_hex">Convierte de binario con 8 bits a hexadecimal</string>
+    <string name="convert_hex_to_bin">Convierte de hexadecimal a binario con 8 bits</string>
+    <string name="hex_correct">Respuesta correcta</string>
+    <string name="hex_wrong">Respuesta incorrecta</string>
+
+
+    <!--  Módulo: signo y magnitud -->
+    <string name="convert_sign_and_magnitude_to_dec">Convierte de decimal a signo-magnitud con %1$d bits</string>
+    <string name="convert_dec_to_sign_and_magnitude">Convierte de signo-magnitud con %1$d bits a decimal</string>
+
+    <!--BINARIO:-->
+    <string name="menu_binario">Binario</string>
+    <string name="solution_button">Solución</string>
+    <string name="swap">Cambiar</string>
+    <string name="convert_bin_to_dec">Convierte de binario a decimal</string>
+    <string name="convert_dec_to_bin">Convierte de decimal a binario</string>
+
 
 </resources>
