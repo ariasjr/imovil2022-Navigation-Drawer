@@ -35,12 +35,12 @@
     <string-array name="protocols_transport" translatable="false">
         <item>UDP</item>
         <item>TCP</item>
-        <item>DNS</item>
     </string-array>
 
     <string-array name="protocols_application" translatable="false">
         <item>POP3</item>
         <item>IMAP</item>
         <item>SSH</item>
+        <item>DNS</item>
     </string-array>
 </resources>

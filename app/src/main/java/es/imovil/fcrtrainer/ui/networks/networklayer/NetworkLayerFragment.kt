@@ -1,11 +1,13 @@
 package es.imovil.fcrtrainer.ui.networks.networklayer
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentNetworkLayerBinding
 import java.util.*
@@ -32,58 +34,60 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
     private lateinit var tvQuestion:TextView
     private var protocol: String = ""
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+
+        val galleryViewModel=ViewModelProvider(this)[NetworkLayerViewModel::class.java]
 
         _binding= FragmentNetworkLayerBinding.inflate(inflater, container, false)
         val root: View =binding.root
 
-        bCheck=binding.bCheck
-        bSolution=binding.bSolution
+        bCheck=binding.bCheck; bSolution=binding.bSolution
         radioGroup=binding.radioGroup
-        rbApplication=binding.rbApplication
-        rbTransport=binding.rbTransport
-        rbInternet=binding.rbInternet
-        rbLink=binding.rbLink
+        rbApplication=binding.rbApplication; rbTransport=binding.rbTransport; rbInternet=binding.rbInternet; rbLink=binding.rbLink
         tvQuestion=binding.tvQuestion
         resultImage=binding.resultImageView
-        questions= resources.getStringArray(R.array.network_layer_questions)
-        answers=resources.getStringArray(R.array.network_layer_answers)
+        questions= resources.getStringArray(R.array.network_layer_questions); answers=resources.getStringArray(R.array.network_layer_answers)
 
-        val mRandomGenerator= Random.nextInt(10)
-        tvQuestion.text=resources.getString(R.string.question_layer)+" "+questions[mRandomGenerator]+"?"
-        protocol=questions[mRandomGenerator]
+        galleryViewModel.text.observe(viewLifecycleOwner){
+            bCheck.isEnabled=false
+            val mRandomGenerator= Random.nextInt(10)
+            tvQuestion.text=resources.getString(R.string.question_layer)+" "+questions[mRandomGenerator]+"?"
+            protocol=questions[mRandomGenerator]
 
-        radioGroup.setOnCheckedChangeListener(this)
+            radioGroup.setOnCheckedChangeListener(this)
 
-        bCheck.setOnClickListener {
-            if(arrayPosiblesRespuestas.contains(protocol)){
-                respuestaCorrecta()
-                val x=Random.nextInt(10)
-                protocol=questions[x]
-                tvQuestion.text=resources.getString(R.string.question_layer)+" "+protocol+"?"
-                radioGroup.clearCheck()
+            bCheck.setOnClickListener {
+                if(arrayPosiblesRespuestas.contains(protocol)){
+                    respuestaCorrecta()
+                    val x=Random.nextInt(10)
+                    protocol=questions[x]
+                    tvQuestion.text=resources.getString(R.string.question_layer)+" "+protocol+"?"
+                    radioGroup.clearCheck()
+                }
+                else respuestaIncorrecta()
             }
-            else respuestaIncorrecta()
+
+            bSolution.setOnClickListener {
+                if (resources.getStringArray(R.array.protocols_application).contains(protocol))
+                    radioGroup.check(rbApplication.id)
+                if (resources.getStringArray(R.array.protocols_transport).contains(protocol))
+                    radioGroup.check(rbTransport.id)
+                if (resources.getStringArray(R.array.protocols_internet).contains(protocol))
+                    radioGroup.check(rbInternet.id)
+                if (resources.getStringArray(R.array.protocols_link).contains(protocol))
+                    radioGroup.check(rbLink.id)
+            }
         }
 
-        bSolution.setOnClickListener {
-            if(resources.getStringArray(R.array.protocols_application).contains(protocol))
-                rbApplication.isSelected
-            else if(resources.getStringArray(R.array.protocols_transport).contains(protocol))
-                rbTransport.isSelected
-            else if(resources.getStringArray(R.array.protocols_internet).contains(protocol))
-                rbInternet.isSelected
-            else rbLink.isSelected
-        }
+        if(savedInstanceState!=null)
+            protocol=savedInstanceState.getString(STATE_NAME_PROTOCOL).toString()
 
         return root
     }
 
     override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int) {
+        bCheck.isEnabled=true
+
         when(idRadio){
             rbApplication.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_application)
             rbTransport.id -> arrayPosiblesRespuestas=resources.getStringArray(R.array.protocols_transport)
@@ -108,26 +112,44 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         }
     }
 
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
     }
 
     private fun setImage(result:Boolean){
-        if(result) binding.resultImageView.setImageResource(R.drawable.ic_correct)
-        else binding.resultImageView.setImageResource(R.drawable.ic_incorrect)
+        if(result) {
+            binding.resultImageView?.setImageResource(R.drawable.ic_correct)
+        }
+        else{
+            binding.resultImageView?.setImageResource(R.drawable.ic_incorrect)
+        }
     }
 
     private fun putImage(){
-        val resultImage: ImageView = binding.resultImageView
-        resultImage.visibility=View.VISIBLE
+        val resultImage: ImageView? = binding.resultImageView
+        if (resultImage != null) {
+            resultImage.visibility=View.VISIBLE
+        }
     }
 
     private fun removeImage(){
-        val resultImage: ImageView = binding.resultImageView
-        resultImage.setImageResource(R.drawable.ic_correct)
-        resultImage.visibility=View.INVISIBLE
+        val resultImage: ImageView? = binding.resultImageView
+        if (resultImage != null) {
+            resultImage.setImageResource(R.drawable.ic_correct)
+            resultImage.visibility=View.INVISIBLE
+        }
+    }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(STATE_NAME_PROTOCOL, protocol)
+    }
+
+    companion object{
+        private const val STATE_NAME_PROTOCOL="name_protocol"
     }
 
 }

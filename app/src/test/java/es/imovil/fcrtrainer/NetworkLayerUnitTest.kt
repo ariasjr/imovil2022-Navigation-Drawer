@@ -1,5 +1,6 @@
 package es.imovil.fcrtrainer
 
+import es.imovil.fcrtrainer.ui.networks.networklayer.NetworkLayerFragment
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -10,5 +11,7 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class NetworkLayerUnitTest {
+
+    private var networkLayerFragment=NetworkLayerFragment()
 
 }
