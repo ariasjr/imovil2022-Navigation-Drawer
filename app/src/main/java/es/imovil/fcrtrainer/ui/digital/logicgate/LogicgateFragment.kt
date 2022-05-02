@@ -254,7 +254,7 @@ class LogicgateFragment : Fragment() {
     }
 
     fun titleString(): String {
-        return "Puertas lógicas"
+        return "                               PUERTAS LÓGICAS"
     }
 
     fun Random.nextInt(range: IntRange): Int {

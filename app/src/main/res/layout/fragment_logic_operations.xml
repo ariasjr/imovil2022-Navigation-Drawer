@@ -25,9 +25,9 @@ limitations under the License.
 
         <include
             android:id="@+id/game_info_panel"
+            layout="@layout/game_info_panel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/game_info_panel" />
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
