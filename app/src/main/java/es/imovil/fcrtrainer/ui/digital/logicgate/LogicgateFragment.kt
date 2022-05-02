@@ -4,23 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentLogicgateBinding
-import kotlin.math.pow
-import kotlin.random.Random
+import kotlin.random.Random as Random
 
 class LogicgateFragment : Fragment() {
-    private var mNumberToConvert = 0
-    private var mDirectConversion = true
-    private val mRandomGenerator = Random(9999999999)
 
     private var _binding: FragmentLogicgateBinding? = null
-
-
     private val binding get() = _binding!!
+
+    private val vectorImg by lazy{
+        resources.obtainTypedArray(R.array.logic_gate)
+    }
+    private var correctValue=0;
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,16 +34,91 @@ class LogicgateFragment : Fragment() {
         _binding = FragmentLogicgateBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val title: TextView = binding.hexTitle
-        val solutionTextView: TextView = binding.solutionText
+        val title: TextView = binding.logicgateTitle
+        val titleSolution: TextView = binding.solutionText
+        val andButton: Button = binding.and
+        val nandButton: Button = binding.nand
+        val orButton: Button = binding.or
+        val norButton: Button = binding.nor
+        val notButton: Button = binding.not
+        val xorButton: Button = binding.xor
+        val bufferButton: Button = binding.triestado
+        val solutionButton: Button = binding.solucion
+        val image: ImageView = binding.imageLogicgate
 
         galleryViewModel.text.observe(viewLifecycleOwner) {
+            title.text = titleString()
 
+            correctValue=Random.nextInt(0..7)
+            image.setImageResource(vectorImg.getResourceId(correctValue,0))
 
+            andButton.setOnClickListener {
+                if(correctValue==0){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            nandButton.setOnClickListener {
+                if(correctValue==1){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            orButton.setOnClickListener {
+                if(correctValue==2){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            norButton.setOnClickListener {
+                if(correctValue==3){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            notButton.setOnClickListener {
+                if(correctValue==4){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            xorButton.setOnClickListener {
+                if(correctValue==5){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            bufferButton.setOnClickListener {
+                if(correctValue==6){
+                    correctValue=Random.nextInt(0..7)
+                    changeImage(correctValue)
+                }
+            }
+            solutionButton.setOnClickListener {
+                if(correctValue == 0){
+                    titleSolution.text = "La puerta correcta es la: AND"
+                }
+                else if (correctValue == 1){
+                    titleSolution.text = "La puerta correcta es la: NAND"
+                }
+                else if (correctValue == 2){
+                    titleSolution.text = "La puerta correcta es la: OR"
+                }
+                else if (correctValue == 3){
+                    titleSolution.text = "La puerta correcta es la: NOR"
+                }
+                else if (correctValue == 4){
+                    titleSolution.text = "La puerta correcta es la: NOT"
+                }
+                else if (correctValue == 5){
+                    titleSolution.text = "La puerta correcta es la: XOR"
+                }
+                else if (correctValue == 6){
+                    titleSolution.text = "La puerta correcta es la: TRIESTADO"
+                }
+            }
         }
-        if (savedInstanceState != null) {
-            mNumberToConvert = savedInstanceState.getInt(STATE_NUMBER_TO_CONVERT)
-        }
+
         return root
     }
 
@@ -53,47 +129,19 @@ class LogicgateFragment : Fragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putInt(STATE_NUMBER_TO_CONVERT, mNumberToConvert)
     }
 
     fun titleString(): String {
-        val formatStringId: Int = if (mDirectConversion) {
-            R.string.convert_bin_to_hex
-        } else {
-            R.string.convert_hex_to_bin
-        }
-        return resources.getString(formatStringId)
+        return "Puertas lógicas"
     }
 
-    fun numberOfBits(): Double {
-        return 8.0
+    fun Random.nextInt(range: IntRange): Int {
+        return range.start + nextInt(range.last - range.start)
     }
 
-    fun obtainSolution(): String {
-        return if (mDirectConversion) {
-            Integer.toHexString(mNumberToConvert).uppercase()
-        } else {
-            Integer.toBinaryString(mNumberToConvert).uppercase()
-        }
-
-    }
-
-    fun generateRandomNumber(): String {
-        val maxNumberToConvert = 2.0.pow(numberOfBits()).toInt()
-        mNumberToConvert = mRandomGenerator.nextInt(maxNumberToConvert)
-        return if (mDirectConversion) {
-            Integer.toBinaryString(mNumberToConvert).toString()
-        } else {
-            Integer.toHexString(mNumberToConvert).uppercase()
-        }
-    }
-
-    fun isCorrect(answer: String): Boolean {
-        return obtainSolution() == answer.uppercase()
-    }
-
-    companion object {
-        private const val STATE_NUMBER_TO_CONVERT = "mNumberToConvert"
+    fun changeImage(x: Int){
+        binding.imageLogicgate.setImageResource(vectorImg.getResourceId(x,0))
+        binding.solutionText.text = ""
     }
 
 
