@@ -46,7 +46,15 @@
 
         </menu>
     </item>
-    <item android:title="@string/network"/>
+    <item android:title="@string/network">
+        <menu>
+            <item
+                android:id="@+id/nav_NumHosts"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/menu_num_hosts" />
 
+
+        </menu>
+    </item>
 
 </menu>

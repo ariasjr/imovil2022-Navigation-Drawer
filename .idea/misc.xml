@@ -3,31 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v21/ic_menu_codes1.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.1995" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/app_bar_main.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/content_main.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/ASturias/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/game_info_panel.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/cards.xml" value="0.1355" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/drawable/ic_menu_logic_operations.xml" value="0.144" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/activity_main.xml" value="0.19429347826086957" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/app_bar_main.xml" value="0.19429347826086957" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/content_main.xml" value="0.19429347826086957" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_LogicOperations.xml" value="0.12092391304347826" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice1.xml" value="0.12092391304347826" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice2.xml" value="0.19429347826086957" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_exercice4.xml" value="0.12092391304347826" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_keyboard.xml" value="0.19429347826086957" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_logic_operation.xml" value="0.11354166666666667" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/fragment_logic_operations.xml" value="0.22" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/game_info_panel.xml" value="0.17028985507246377" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/nav_header_main.xml" value="0.19429347826086957" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/overlapped_info_window.xml" value="0.17028985507246377" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/layout/prueba.xml" value="0.17028985507246377" />
-        <entry key="..\:/Users/Angela/AndroidStudioProjects/imovil2022-Navigation-Drawer/app/src/main/res/menu/activity_main_drawer.xml" value="0.17708333333333334" />
-        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer---/app/src/main/res/layout/fragment_logic_operations.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Pablo/AndroidStudioProjects/imovil2022-Navigation-Drawer---/app/src/main/res/layout/fragment_logicgate.xml" value="0.33" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.37395833333333334" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.196" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/drawable/ic_codes_binary.xml" value="0.298" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/activity_main.xml" value="0.35688405797101447" />
@@ -41,6 +17,36 @@
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/layout/nav_header_main.xml" value="0.35688405797101447" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/arias/AndroidStudioProjects/TrabajosEnGrupo/2022/FCRTrainer/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable-v21/ic_menu_codes1.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable/ic_correct.xml" value="0.1955" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout-land/fragment_binario.xml" value="0.21208112874779542" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/activity_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/app_bar_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/binary_keyboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/content_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_binario.xml" value="0.25" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_exercice1.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_exercice2.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/fragment_hexadecimal.xml" value="0.264" />
+        <entry key="..\:/Users/ifc04/Desktop/UNI/TGImovil/app/src/main/res/layout/nav_header_main.xml" value="0.11302083333333333" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.198" />
+        <entry key="app/src/main/res/layout-land/fragment_binario.xml" value="0.2940917107583774" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_binario.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/fragment_exercice1.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_exercice2.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_hexadecimal.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/layout/hexadecimal_keyoard.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/num_hosts_fragment.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.19010416666666666" />
       </map>
     </option>
   </component>
