@@ -17,7 +17,21 @@
         android:label="@string/menu_ejercicio2"
         tools:layout="@layout/fragment_exercice2" />
 
+    <fragment
+        android:id="@+id/nav_hexadecimal"
+        android:name="es.imovil.fcrtrainer.ui.codes.hexadecimal.HexadecimalFragment"
+        android:label="@string/menu_hexadecimal"
+        tools:layout="@layout/fragment_hexadecimal" />
 
+    <fragment
+        android:id="@+id/nav_ejercicioBinario"
+        android:name="es.imovil.fcrtrainer.ui.codes.binario.BinarioFragment"
+        android:label="@string/menu_binario"
+        tools:layout="@layout/fragment_binario" />
+    <fragment
+        android:id="@+id/nav_NumHosts"
+        android:name="es.imovil.fcrtrainer.ui.codes.num_hosts.NumHostsFragment"
+        android:label="@string/menu_num_hosts" />
     <fragment
         android:id="@+id/nav_network_layer"
         android:name="es.imovil.fcrtrainer.ui.networks.networklayer.NetworkLayerFragment"
