@@ -20,4 +20,5 @@
 
     <string name="respuesta_correcta">¡¡Respuesta Correcta!!</string>
     <string name="respuesta_erronea">Respuesta Incorrecta</string>
+    <string name="enunciado">Introduce la salida S del circuito digital</string>
 </resources>
