@@ -104,7 +104,7 @@ class TwosComplementFragment : Fragment() {
         (mAnswerEditText as TextView).text = ""
     }
 
-    private fun generateRandomNumber(): String {
+    fun generateRandomNumber(): String {
         val min = -(2.0.pow(numberOfBits() - 1)).toInt()
         val max = (2.0.pow(numberOfBits() - 1) - 1).toInt()
         mNumberToConvert = mRandomGenerator.nextInt(max - min + 1) + min
@@ -116,7 +116,7 @@ class TwosComplementFragment : Fragment() {
         }
     }
 
-    private fun twosComplement(n: Int): String{
+    fun twosComplement(n: Int): String{
             if (n >= 0) {
                 var nPositivo = Integer.toBinaryString(n).toString()
                 var tam = nPositivo.length
@@ -151,7 +151,7 @@ class TwosComplementFragment : Fragment() {
             }
     }
 
-    private fun obtainSolution(): String {
+    fun obtainSolution(): String {
         return if(mBinaryToDecimal){
             mNumberToConvert.toString().uppercase()
         } else{
