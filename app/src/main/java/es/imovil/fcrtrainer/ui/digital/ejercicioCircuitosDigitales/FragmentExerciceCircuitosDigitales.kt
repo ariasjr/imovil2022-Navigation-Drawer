@@ -6,6 +6,7 @@ import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +14,7 @@ import com.google.android.material.snackbar.Snackbar
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentExerciceCircuitosDigitalesBinding
 import java.util.*
+import kotlin.concurrent.schedule
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -49,22 +51,19 @@ class FragmentExerciceCircuitosDigitales : Fragment() {
         }
         binding.boton0.setOnClickListener {
             if(soluciones[circuito-1]==false){
-                Snackbar.make(it, getString(R.string.respuesta_correcta), Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                solucion(true)
                 generarNivel()
             }else{
-                Snackbar.make(it, getString(R.string.respuesta_erronea), Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                solucion(false)
             }
         }
         binding.boton1.setOnClickListener {
+
             if(soluciones[circuito-1]==true){
-                Snackbar.make(it, getString(R.string.respuesta_correcta), Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                solucion(true)
                 generarNivel()
             }else {
-                Snackbar.make(it, getString(R.string.respuesta_erronea), Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                solucion(false)
             }
         }
 
@@ -111,6 +110,20 @@ class FragmentExerciceCircuitosDigitales : Fragment() {
     }
     fun booleanToInt(b: Boolean): Int {
         return if (b) 1 else 0
+    }
+
+    fun solucion(s:Boolean){
+        if(s){
+            binding.solucion.setImageResource(R.drawable.ic_correct)
+        }else{
+            binding.solucion.setImageResource(R.drawable.ic_incorrect)
+        }
+        val resultado:ImageView = binding.solucion
+        resultado.visibility=View.VISIBLE
+        Timer("SettingUp", false).schedule(500) {
+            resultado.visibility=View.INVISIBLE//Esperamos removeImage() //El image view desaparece a los 2 seg
+        }
+
     }
 
 }
