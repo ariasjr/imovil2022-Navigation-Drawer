@@ -1,6 +1,7 @@
 package es.imovil.fcrtrainer
 
 import es.imovil.fcrtrainer.ui.networks.networklayer.NetworkLayerFragment
+import org.junit.Assert
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -15,7 +16,12 @@ class NetworkLayerUnitTest {
     private var networkLayerFragment=NetworkLayerFragment()
 
     @Test
-    fun prueba1(){
+    fun titleString(){
+        Assert.assertEquals("Adivina la capa", networkLayerFragment.titleString())
+    }
 
+    @Test
+    fun calculateNumber(){
+        assertEquals(2, networkLayerFragment.calculateNumber())
     }
 }

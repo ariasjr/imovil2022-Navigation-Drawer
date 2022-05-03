@@ -31,6 +31,7 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
     private lateinit var rbInternet: RadioButton
     private lateinit var rbLink: RadioButton
     private lateinit var resultImage: ImageView
+    private lateinit var tvTitle: TextView
     private lateinit var tvQuestion:TextView
     private var protocol: String = ""
 
@@ -44,13 +45,14 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         bCheck=binding.bCheck; bSolution=binding.bSolution
         radioGroup=binding.radioGroup
         rbApplication=binding.rbApplication; rbTransport=binding.rbTransport; rbInternet=binding.rbInternet; rbLink=binding.rbLink
-        tvQuestion=binding.tvQuestion
+        tvQuestion=binding.tvQuestion; tvTitle=binding.tvTitle
         resultImage=binding.resultImageView
         questions= resources.getStringArray(R.array.network_layer_questions); answers=resources.getStringArray(R.array.network_layer_answers)
 
         galleryViewModel.text.observe(viewLifecycleOwner){
+            tvTitle.text=titleString()
             bCheck.isEnabled=false
-            val mRandomGenerator= Random.nextInt(10)
+            val mRandomGenerator= calculateNumber()
             tvQuestion.text=resources.getString(R.string.question_layer)+" "+questions[mRandomGenerator]+"?"
             protocol=questions[mRandomGenerator]
 
@@ -59,8 +61,7 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
             bCheck.setOnClickListener {
                 if(arrayPossibleAnswers.contains(protocol)){
                     correctAnswer()
-                    val x=Random.nextInt(10)
-                    protocol=questions[x]
+                    protocol=questions[calculateNumber()]
                     tvQuestion.text=resources.getString(R.string.question_layer)+" "+protocol+"?"
                     radioGroup.clearCheck()
                 }
@@ -112,7 +113,13 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         }
     }
 
+    fun calculateNumber():Int{
+        return Random.nextInt(10)
+    }
 
+    fun titleString():String{
+        return resources.getString(R.string.layer_title)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

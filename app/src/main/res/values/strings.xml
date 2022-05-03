@@ -18,7 +18,7 @@
 
     <!-- String layer exercise -->
     <string name="layer_exercise">Network Layer</string>
-    <string name="layer_title">Guess the layer</string>
+    <string name="layer_title">Adivina la capa</string>
     <string name="application_layer">Application layer</string>
     <string name="transport_layer">Transport layer</string>
     <string name="internet_layer">Internet layer</string>
