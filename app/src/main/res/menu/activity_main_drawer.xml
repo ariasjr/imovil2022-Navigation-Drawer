@@ -13,6 +13,18 @@
                 android:id="@+id/nav_ejercicio2"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="@string/menu_ejercicio2" />
+            <item
+                android:id="@+id/nav_signed_magnitude"
+                android:icon="@drawable/ic_menu_signed_magnitud"
+                android:title="@string/menu_signed_magnitude" />
+            <item
+                android:id="@+id/nav_hexadecimal"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/menu_hexadecimal" />
+            <item
+                android:id="@+id/nav_ejercicioBinario"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/menu_binario" />
 
         </menu>
     </item>
@@ -22,6 +34,14 @@
                 android:id="@+id/nav_ejercicioN"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="@string/menu_ejercicioN" />
+            <item
+                android:id="@+id/nav_logicgate"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/puerta_l_gica" />
+            <item
+                android:id="@+id/nav_logic_operations"
+                android:icon="@drawable/ic_menu_logic_operations"
+                android:title="@string/menu_logical_operations" />
 
 
         </menu>
@@ -29,12 +49,14 @@
     <item android:title="@string/network">
         <menu>
             <item
+                android:id="@+id/nav_NumHosts"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/menu_num_hosts" />
+            <item
                 android:id="@+id/nav_network_layer"
                 android:icon="@drawable/ic_nav_network_layer"
                 android:title="@string/layer_exercise"/>
-
         </menu>
     </item>
-
 
 </menu>

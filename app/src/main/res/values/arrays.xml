@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <array name="logic_gate">
+        <item>@drawable/logic_gate_and</item>
+        <item>@drawable/logic_gate_nand</item>
+        <item>@drawable/logic_gate_or</item>
+        <item>@drawable/logic_gate_nor</item>
+        <item>@drawable/logic_gate_not</item>
+        <item>@drawable/logic_gate_xor</item>
+        <item>@drawable/logic_gate_buffer</item>
+    </array>
     <!-- arrays network layer -->
     <string-array name="network_layer_answers">
         <item>@string/application_layer</item>
