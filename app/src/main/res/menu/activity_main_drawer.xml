@@ -25,6 +25,10 @@
                 android:id="@+id/nav_ejercicioBinario"
                 android:icon="@drawable/ic_menu_codes1"
                 android:title="@string/menu_binario" />
+            <item
+                android:id="@+id/nav_twos_complement"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/twos_complement" />
 
         </menu>
     </item>

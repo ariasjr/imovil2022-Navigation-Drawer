@@ -1,0 +1,145 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:orientation="vertical">
+
+            <TextSwitcher
+                android:id="@+id/exercisetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tcTitle"
+                    android:layout_width="413dp"
+                    android:layout_height="40dp"
+                    android:textSize="16sp"
+                    tools:text="Exercise title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Exercise title" />
+            </TextSwitcher>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutInput"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal">
+
+                <TextSwitcher
+                    android:id="@+id/numbertoconvert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6">
+
+                    <TextView
+                        android:id="@+id/tcNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="0001"></TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="1"></TextView>
+                </TextSwitcher>
+
+                <EditText
+                    android:id="@+id/tcAnswer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    tools:text="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/tcComprobar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/check" />
+
+                <Button
+                    android:id="@+id/tcSolucion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/solution_button" />
+
+                <Button
+                    android:id="@+id/tcInverso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:text="@string/swap" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/solution_text"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <es.imovil.fcrtrainer.ui.codes.twosComplement.TwosComplementKeyboardView
+                android:id="@+id/keyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            </es.imovil.fcrtrainer.ui.codes.twosComplement.TwosComplementKeyboardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/resultImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_correct" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

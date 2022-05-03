@@ -32,6 +32,11 @@
         android:id="@+id/nav_NumHosts"
         android:name="es.imovil.fcrtrainer.ui.codes.num_hosts.NumHostsFragment"
         android:label="@string/menu_num_hosts" />
+    <fragment
+        android:id="@+id/nav_twos_complement"
+        android:name="es.imovil.fcrtrainer.ui.codes.twosComplement.TwosComplementFragment"
+        android:label="@string/twos_complement"
+        tools:layout="@layout/fragment_twos_complement"/>
 
     <fragment
         android:id="@+id/nav_network_layer"
