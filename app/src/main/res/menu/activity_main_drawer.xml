@@ -26,7 +26,13 @@
 
         </menu>
     </item>
-    <item android:title="@string/network"/>
+    <item android:title="@string/network">
+        <menu>
+            <item
+                android:id="@+id/CIDR"
+                android:title="@string/menu_CIDR"/>
+        </menu>
+    </item>
 
 
 </menu>

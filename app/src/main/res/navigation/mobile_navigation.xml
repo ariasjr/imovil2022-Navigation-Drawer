@@ -22,4 +22,9 @@
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
         android:label="@string/menu_ejercicioN"
         tools:layout="@layout/fragment_exerciceN" />
+    <fragment
+        android:id="@+id/CIDR"
+        android:name="es.imovil.fcrtrainer.ui.codes.cidr.cidrFragment"
+        android:label="@string/menu_CIDR"
+        tools:layout="@layout/fragment_cidr" />
 </navigation>
