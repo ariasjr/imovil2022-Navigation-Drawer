@@ -58,18 +58,18 @@
         <item name="android:padding">12dp</item>
     </style>
 
-    <style name="score_info">
-        <item name="android:textSize">@dimen/score_font</item>
-        <item name="android:textColor">@color/score_info</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
-    </style>
-
     <style name="game_fragment">
         <item name="android:background">@color/mediumgray</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="score_info">
+        <item name="android:textSize">@dimen/score_font</item>
+        <item name="android:textColor">@color/score_info</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
     </style>
 
 </resources>

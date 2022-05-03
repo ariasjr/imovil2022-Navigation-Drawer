@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="logic_gate">
+        <item>@drawable/logic_gate_and</item>
+        <item>@drawable/logic_gate_nand</item>
+        <item>@drawable/logic_gate_or</item>
+        <item>@drawable/logic_gate_nor</item>
+        <item>@drawable/logic_gate_not</item>
+        <item>@drawable/logic_gate_xor</item>
+        <item>@drawable/logic_gate_buffer</item>
+    </array>
+    <!-- arrays network layer -->
+    <string-array name="network_layer_answers">
+        <item>@string/application_layer</item>
+        <item>@string/transport_layer</item>
+        <item>@string/internet_layer</item>
+        <item>@string/link_layer</item>
+    </string-array>
+
+    <string-array name="network_layer_questions" translatable="false">
+        <item>IP</item>
+        <item>UDP</item>
+        <item>TCP</item>
+        <item>POP3</item>
+        <item>IMAP</item>
+        <item>DNS</item>
+        <item>Ethernet</item>
+        <item>ARP</item>
+        <item>SSH</item>
+        <item>ICMP</item>
+    </string-array>
+
+    <string-array name="protocols_link" translatable="false">
+        <item>Ethernet</item>
+    </string-array>
+
+    <string-array name="protocols_internet" translatable="false">
+        <item>IP</item>
+        <item>ICMP</item>
+        <item>ARP</item>
+    </string-array>
+
+    <string-array name="protocols_transport" translatable="false">
+        <item>UDP</item>
+        <item>TCP</item>
+    </string-array>
+
+    <string-array name="protocols_application" translatable="false">
+        <item>POP3</item>
+        <item>IMAP</item>
+        <item>SSH</item>
+        <item>DNS</item>
+    </string-array>
+</resources>

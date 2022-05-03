@@ -24,20 +24,30 @@
         tools:layout="@layout/fragment_hexadecimal" />
 
     <fragment
-        android:id="@+id/nav_ejercicioN"
-        android:name="es.imovil.fcrtrainer.ui.digital.ejercicio4.ExerciceNFragment"
-        android:label="@string/menu_ejercicioN"
-        tools:layout="@layout/fragment_exercice4" />
-    <fragment
-        android:id="@+id/nav_signed_magnitude"
-        android:name="es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeFragment"
-        android:label="@string/menu_signed_magnitude"
-        tools:layout="@layout/fragment_signed_magnitude" />
-
-    <fragment
         android:id="@+id/nav_ejercicioBinario"
         android:name="es.imovil.fcrtrainer.ui.codes.binario.BinarioFragment"
         android:label="@string/menu_binario"
         tools:layout="@layout/fragment_binario" />
+    <fragment
+        android:id="@+id/nav_NumHosts"
+        android:name="es.imovil.fcrtrainer.ui.codes.num_hosts.NumHostsFragment"
+        android:label="@string/menu_num_hosts" />
 
+    <fragment
+        android:id="@+id/nav_network_layer"
+        android:name="es.imovil.fcrtrainer.ui.networks.networklayer.NetworkLayerFragment"
+        android:label="@string/menu_exercise_network_layer"
+        tools:layout="@layout/fragment_network_layer" />
+    <fragment
+        android:id="@+id/nav_logic_operations"
+        android:name="es.imovil.fcrtrainer.ui.codes.LogicOperations.LogicOperationsFragment"
+        android:label="LogicOperationsFragment" />
+    <fragment
+        android:id="@+id/nav_logicgate"
+        android:name="es.imovil.fcrtrainer.ui.digital.logicgate.LogicgateFragment"
+        android:label="LogicgateFragment" />
+    <fragment
+        android:id="@+id/nav_signed_magnitude"
+        android:name="es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeFragment"
+        android:label=" " />
 </navigation>
