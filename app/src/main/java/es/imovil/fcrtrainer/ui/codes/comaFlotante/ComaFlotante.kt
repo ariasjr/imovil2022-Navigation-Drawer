@@ -39,21 +39,24 @@ class ComaFlotante : Fragment() {
         _binding = FragmentComaflotanteBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.binTarget
-        val title: TextView = binding.binTitle
+        val textView: TextView = binding.comaTarget
+        val title: TextView = binding.comaTitle
         val solutionTextView: TextView = binding.solutionText
         val swapButton: Button = binding.change
         val checkButton: Button = binding.checkbutton
         val solutionButton: Button = binding.solution
         val answer: TextView = binding.comaTextViewAnswer
+        val texto: TextView = binding.textView2
         val resultImage: ImageView? = binding.resultImageView
         galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = generateRandomNumber()
             title.text = titleString()
+            texto.text = textoString()
             swapButton.setOnClickListener{
                 mDirectConversion = !mDirectConversion
                 textView.text = generateRandomNumber()
                 title.text = titleString()
+                texto.text = textoString()
                 answer.text = ""
                 solutionTextView.text = ""
             }
@@ -142,8 +145,19 @@ class ComaFlotante : Fragment() {
     fun titleString(): String {
         val formatStringId: Int = if (mDirectConversion) {
             R.string.convert_iee_to_dec
+
         } else {
             R.string.convert_dec_to_iee
+        }
+        return resources.getString(formatStringId)
+    }
+
+    fun textoString(): String {
+        val formatStringId: Int = if (mDirectConversion) {
+            R.string.convert_iee_to_dec2
+
+        } else {
+            R.string.convert_dec_to_iee2
         }
         return resources.getString(formatStringId)
     }

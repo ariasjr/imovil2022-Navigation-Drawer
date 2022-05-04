@@ -22,7 +22,9 @@
     <string name="solution">Solución introducida</string>
     <string name="swap">Cambiar</string>
     <string name="convert_dec_to_iee">Convierte a formato IEE 754</string>
+    <string name="convert_dec_to_iee2">Número decimal</string>
     <string name="convert_iee_to_dec">Convierte de IEE 754 a decimal</string>
+    <string name="convert_iee_to_dec2">S    Exp(8 bits)     Mantisa (23 bits)</string>
     <string name="hex_correct">Respuesta correcta</string>
     <string name="hex_wrong">Respuesta incorrecta</string>
 </resources>
