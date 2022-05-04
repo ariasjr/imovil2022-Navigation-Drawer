@@ -22,7 +22,7 @@ class ComaFlotanteKeyboardView(context: Context?, attributeSet: AttributeSet) : 
         if (mEditText == null) {
             // No textView assigned. By default, we look for one with id answer
             val parent = parent as View
-            mEditText = parent.findViewById(R.id.comaflotante_text_view_answer)
+            mEditText = parent.findViewById(R.id.coma_text_view_answer)
             if (mEditText == null) { // not found
                 return
             }

@@ -45,7 +45,7 @@ class ComaFlotante : Fragment() {
         val swapButton: Button = binding.change
         val checkButton: Button = binding.checkbutton
         val solutionButton: Button = binding.solution
-        val answer: TextView = binding.binTextViewAnswer
+        val answer: TextView = binding.comaTextViewAnswer
         val resultImage: ImageView? = binding.resultImageView
         galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = generateRandomNumber()
@@ -141,9 +141,9 @@ class ComaFlotante : Fragment() {
 
     fun titleString(): String {
         val formatStringId: Int = if (mDirectConversion) {
-            R.string.convert_dec_to_iee
-        } else {
             R.string.convert_iee_to_dec
+        } else {
+            R.string.convert_dec_to_iee
         }
         return resources.getString(formatStringId)
     }
