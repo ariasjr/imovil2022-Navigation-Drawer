@@ -17,9 +17,10 @@ import kotlin.math.pow
 import kotlin.random.Random
 import java.util.Timer
 import kotlin.concurrent.schedule
+import kotlin.math.roundToInt
 
 class ComaFlotante : Fragment() {
-    private var mNumberToConvert = 0
+    private var mNumberToConvert = -0.0
     private var mDirectConversion = false
     private val mRandomGenerator = Random(9999999999)
 
@@ -100,7 +101,7 @@ class ComaFlotante : Fragment() {
 
         }
         if (savedInstanceState != null) {
-            mNumberToConvert = savedInstanceState.getInt(STATE_NUMBER_TO_CONVERT)
+            mNumberToConvert = savedInstanceState.getInt(STATE_NUMBER_TO_CONVERT).toDouble()
         }
         return root
     }
@@ -112,7 +113,7 @@ class ComaFlotante : Fragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putInt(STATE_NUMBER_TO_CONVERT, mNumberToConvert)
+        outState.putFloat(STATE_NUMBER_TO_CONVERT, mNumberToConvert.toFloat())
     }
 
     fun setImage(result:Boolean){
@@ -154,10 +155,10 @@ class ComaFlotante : Fragment() {
 
     fun textoString(): String {
         val formatStringId: Int = if (mDirectConversion) {
-            R.string.convert_iee_to_dec2
+            R.string.convert_dec_to_iee2
 
         } else {
-            R.string.convert_dec_to_iee2
+            R.string.convert_iee_to_dec2
         }
         return resources.getString(formatStringId)
     }
@@ -171,16 +172,17 @@ class ComaFlotante : Fragment() {
             mNumberToConvert.toString().uppercase()
         } else {
 
-            Integer.toBinaryString(mNumberToConvert).uppercase()
+            Integer.toBinaryString(mNumberToConvert.toInt()).uppercase()
         }
 
     }
 
     fun generateRandomNumber(): String {
-        val maxNumberToConvert = 2.0.pow(numberOfBits()).toInt()
-        mNumberToConvert = mRandomGenerator.nextInt(maxNumberToConvert)
+        val numeros= mutableListOf("-7.5","-7.0","-6.5","-6.0","-5.5","-5.0","-4.5","-4.0","-3.5","-3.0","-2.5","-2.0","-1.5","-1.0","-0.5","0","0.5","1.0","1.5","2.0","2.5","3.0","3.5","4.0","4.5","5.0","5.5","6.0","6.5","7.0","7.5")
+        val numero=numeros.random()
+        mNumberToConvert = numero.toDouble()
         return if (mDirectConversion) {
-            Integer.toBinaryString(mNumberToConvert).toString()
+            Integer.toBinaryString(mNumberToConvert.toInt()).toString()
         } else {
             mNumberToConvert.toString().uppercase()
         }
@@ -196,7 +198,7 @@ class ComaFlotante : Fragment() {
 
 
     fun setNumbertoConvert(param: Int){
-        mNumberToConvert= param;
+        mNumberToConvert= param.toDouble();
     }
 
     fun changeMode(param: Boolean){
