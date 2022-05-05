@@ -52,11 +52,13 @@ class FragmentExerciceCircuitosDigitales : Fragment() {
 
         _binding = FragmentExerciceCircuitosDigitalesBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.textSlideshow.text=getText(R.string.enunciadoCD)
         generarNivel()
         val textView: TextView = binding.textSlideshow
         slideshowViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+            textView.text = getText(R.string.enunciadoCD)
         }
+
 
         /**
          * Función del botón boton0

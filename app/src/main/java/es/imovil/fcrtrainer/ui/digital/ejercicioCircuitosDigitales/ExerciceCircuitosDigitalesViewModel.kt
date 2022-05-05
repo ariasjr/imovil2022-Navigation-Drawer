@@ -9,7 +9,7 @@ import es.imovil.fcrtrainer.R
 class ExerciceCircuitosDigitalesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Introduce la salida S del circuito digital"
+        value = "This is Circuitos Digitales Fragment"
 
     }
     val text: LiveData<String> = _text
