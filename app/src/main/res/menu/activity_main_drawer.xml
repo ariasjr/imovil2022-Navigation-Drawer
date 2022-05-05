@@ -30,7 +30,8 @@
         <menu>
             <item
                 android:id="@+id/CIDR"
-                android:title="@string/menu_CIDR"/>
+                android:title="@string/menu_CIDR"
+                android:icon="@drawable/ic_menu_cidr"/>
         </menu>
     </item>
 

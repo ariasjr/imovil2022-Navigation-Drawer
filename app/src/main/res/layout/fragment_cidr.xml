@@ -27,23 +27,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/bin_title"
-                    android:layout_width="413dp"
-                    android:layout_height="37dp"
-                    android:textSize="16sp"
-                    tools:text="\nCompute the CIDR mask" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Compute the CIDR mask" />
             </TextSwitcher>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                tools:text="Compute the CIDR mask" />
 
             <LinearLayout
                 android:id="@+id/LinearLayoutInput"
                 android:layout_width="match_parent"
-                android:layout_height="67dp"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
 
                 <TextSwitcher
@@ -98,7 +92,7 @@
             <TextView
                 android:id="@+id/solution_text"
                 android:layout_width="match_parent"
-                android:layout_height="47dp"
+                android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

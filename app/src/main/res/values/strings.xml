@@ -18,13 +18,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--CIDR-->
-    <string name="menu_Cidr">CIDR</string>
     <string name="check">Comprobar</string>
     <string name="solution_button">Solución</string>
     <string name="solution">Solución introducida</string>
     <string name="hex_correct">Respuesta correcta</string>
     <string name="hex_wrong">Respuesta incorrecta</string>
     <string name="menu_CIDR">CIDR Mask</string>
-    <string name="swap">Cambiar</string>
+
 
 </resources>
