@@ -29,6 +29,10 @@
                 android:id="@+id/nav_twos_complement"
                 android:icon="@drawable/ic_menu_codes1"
                 android:title="@string/twos_complement" />
+            <item
+                android:id="@+id/nav_ejercicioComaFlotante"
+                android:icon="@drawable/ic_menu_comaflotante"
+                android:title="@string/menu_ejercicioComa" />
 
         </menu>
     </item>
@@ -38,29 +42,11 @@
                 android:id="@+id/nav_ejercicioN"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="@string/menu_ejercicioN" />
-            <item
-                android:id="@+id/nav_logicgate"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/puerta_l_gica" />
-            <item
-                android:id="@+id/nav_logic_operations"
-                android:icon="@drawable/ic_menu_logic_operations"
-                android:title="@string/menu_logical_operations" />
 
 
         </menu>
     </item>
-    <item android:title="@string/network">
-        <menu>
-            <item
-                android:id="@+id/nav_NumHosts"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_num_hosts" />
-            <item
-                android:id="@+id/nav_network_layer"
-                android:icon="@drawable/ic_nav_network_layer"
-                android:title="@string/layer_exercise"/>
-        </menu>
-    </item>
+    <item android:title="@string/network"/>
+
 
 </menu>
