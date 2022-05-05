@@ -32,8 +32,9 @@
                         android:id="@+id/bin_title"
                         android:layout_width="413dp"
                         android:layout_height="40dp"
+                        android:text="@string/title_num_hosts"
                         android:textSize="16sp"
-                        tools:text="@string/title_num_hosts" />
+                        android:visibility="visible" />
 
                     <TextView
                         android:layout_width="wrap_content"
