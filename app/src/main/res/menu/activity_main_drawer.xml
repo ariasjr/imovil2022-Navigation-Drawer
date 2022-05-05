@@ -63,7 +63,7 @@
             <item
                 android:id="@+id/network_mask"
                 android:icon="@drawable/ic_nav_network_layer"
-                android:title="Network mask"/>
+                android:title="Máscara de red"/>
         </menu>
     </item>
 
