@@ -10,6 +10,10 @@
     <string name="menu_ejercicio1">Ejercicio1</string>
     <string name="menu_ejercicio2">Ejercicio2</string>
     <string name="menu_ejercicioN">EjercicioN</string>
+
+    <string name="codes">Códigos</string>
+    <string name="digital_systems">Digitales</string>
+    <string name="network">Redes</string>
     <string name="menu_network_layer">Capa de red</string>
 
     <string name="menu_hexadecimal">Hexadecimal</string>
@@ -18,11 +22,6 @@
     <string name="convert_hex_to_bin">Convierte de hexadecimal a binario con 8 bits</string>
     <string name="hex_correct">Respuesta correcta</string>
     <string name="hex_wrong">Respuesta incorrecta</string>
-
-    <string name="codes">Códigos</string>
-    <string name="digital_systems">Digitales</string>
-    <string name="network">Redes</string>
-
     <string name="menu_logical_operations">Logical Operations</string>
     <string name="error_no_clock">Error: este ejercicio no está preparado para jugar</string>
     <string name="LOpregunta">¿Cuál es la solución a esta operación lógica?</string>
@@ -42,6 +41,8 @@
     <string name="convert_bin_to_dec">Convierte de binario a decimal</string>
     <string name="convert_dec_to_bin">Convierte de decimal a binario</string>
 
+    <!--CIDR:-->
+    <string name="menu_CIDR">CIDR Mask</string>
     <!-- String layer exercise -->
     <string name="layer_exercise">Capa de red</string>
     <string name="layer_title">Adivina la capa</string>

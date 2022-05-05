@@ -52,6 +52,10 @@
                 android:id="@+id/nav_network_layer"
                 android:icon="@drawable/ic_nav_network_layer"
                 android:title="@string/menu_network_layer" />
+            <item
+                android:id="@+id/CIDR"
+                android:title="@string/menu_CIDR"
+                android:icon="@drawable/ic_menu_cidr"/>
         </menu>
     </item>
 

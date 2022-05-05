@@ -16,12 +16,11 @@
         android:name="es.imovil.fcrtrainer.ui.codes.ejercicio2.Exercice2Fragment"
         android:label="@string/menu_ejercicio2"
         tools:layout="@layout/fragment_exercice2" />
-
     <fragment
-        android:id="@+id/nav_hexadecimal"
-        android:name="es.imovil.fcrtrainer.ui.codes.hexadecimal.HexadecimalFragment"
-        android:label="@string/menu_hexadecimal"
-        tools:layout="@layout/fragment_hexadecimal" />
+    android:id="@+id/nav_hexadecimal"
+    android:name="es.imovil.fcrtrainer.ui.codes.hexadecimal.HexadecimalFragment"
+    android:label="@string/menu_hexadecimal"
+    tools:layout="@layout/fragment_hexadecimal" />
 
     <fragment
         android:id="@+id/nav_ejercicioBinario"
@@ -59,4 +58,9 @@
         android:id="@+id/nav_signed_magnitude"
         android:name="es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeFragment"
         android:label=" " />
+    <fragment
+        android:id="@+id/CIDR"
+        android:name="es.imovil.fcrtrainer.ui.codes.cidr.cidrFragment"
+        android:label="@string/menu_CIDR"
+        tools:layout="@layout/fragment_cidr" />
 </navigation>
