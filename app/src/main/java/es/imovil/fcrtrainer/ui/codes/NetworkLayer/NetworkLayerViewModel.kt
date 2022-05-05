@@ -1,4 +1,4 @@
-package es.imovil.fcrtrainer.ui.networks.networklayer
+package es.imovil.fcrtrainer.ui.codes.NetworkLayer
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
