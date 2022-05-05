@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/nav_network_layer"
         android:name="es.imovil.fcrtrainer.ui.networks.networklayer.NetworkLayerFragment"
-        android:label="@string/menu_exercise_network_layer"
+        android:label="@string/menu_network_layer"
         tools:layout="@layout/fragment_network_layer" />
     <fragment
         android:id="@+id/nav_logic_operations"
