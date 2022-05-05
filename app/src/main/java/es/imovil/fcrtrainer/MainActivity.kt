@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_ejercicio1, R.id.nav_ejercicio2, R.id.nav_ejercicioBinario, R.id.nav_hexadecimal, R.id.nav_signed_magnitude, R.id.nav_ejercicioN, R.id.nav_logicgate, R.id.nav_logic_operations, R.id.nav_twos_complement
-                , R.id.nav_NumHosts, R.id.nav_network_layer
+                , R.id.nav_NumHosts, R.id.nav_network_layer, R.id.network_mask
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

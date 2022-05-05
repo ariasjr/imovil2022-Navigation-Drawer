@@ -55,4 +55,8 @@
         android:id="@+id/nav_signed_magnitude"
         android:name="es.imovil.fcrtrainer.ui.codes.signed_magnitude.SignedMagnitudeFragment"
         android:label=" " />
+    <fragment
+        android:id="@+id/network_mask"
+        android:name="es.imovil.fcrtrainer.ui.codes.NetworkMask.NetworkMaskFragment"
+        android:label="NetworkMaskFragment" />
 </navigation>

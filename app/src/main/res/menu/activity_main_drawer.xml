@@ -60,6 +60,10 @@
                 android:id="@+id/nav_network_layer"
                 android:icon="@drawable/ic_nav_network_layer"
                 android:title="@string/layer_exercise"/>
+            <item
+                android:id="@+id/network_mask"
+                android:icon="@drawable/ic_nav_network_layer"
+                android:title="Network mask"/>
         </menu>
     </item>
 

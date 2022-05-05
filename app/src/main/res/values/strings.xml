@@ -70,6 +70,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu_num_hosts">Número de hosts</string>
     <string name="title_num_hosts">Calcula el número de hosts de esta máscara de red</string>
+    <string name="title_mask_network">Máscara de red más pequeña que puede tener este número de máquinas</string>
 
 
     <string name="twos_complement">Twos Complement</string>
