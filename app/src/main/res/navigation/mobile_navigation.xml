@@ -59,4 +59,14 @@
         android:id="@+id/network_mask"
         android:name="es.imovil.fcrtrainer.ui.codes.NetworkMask.NetworkMaskFragment"
         android:label="NetworkMaskFragment" />
+    <fragment
+        android:id="@+id/CIDR"
+        android:name="es.imovil.fcrtrainer.ui.codes.cidr.cidrFragment"
+        android:label="@string/menu_CIDR"
+        tools:layout="@layout/fragment_cidr" />
+    <fragment
+        android:id="@+id/nav_ejercicio_Circuitos_Digitales"
+        android:name="es.imovil.fcrtrainer.ui.digital.ejercicioCircuitosDigitales.FragmentExerciceCircuitosDigitales"
+        android:label="Ejercicio Circuitos Digitales"
+        tools:layout="@layout/fragment_exercice_circuitos_digitales" />
 </navigation>
