@@ -27,6 +27,14 @@
         </menu>
     </item>
     <item android:title="@string/network"/>
+    <item android:title="@string/highscores">
+        <menu>
+            <item
+                android:id="@+id/nav_highscore"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/highscores" />
+        </menu>
+    </item>
 
 
 </menu>
