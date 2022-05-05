@@ -10,6 +10,14 @@
     <string name="menu_ejercicio1">Ejercicio1</string>
     <string name="menu_ejercicio2">Ejercicio2</string>
     <string name="menu_ejercicioN">EjercicioN</string>
+    <string name="menu_exercise_network_layer">Network Layer Exercise</string>
+
+    <string name="menu_hexadecimal">Hexadecimal</string>
+    <string name="solution">Solución</string>
+    <string name="convert_bin_to_hex">Convierte de binario con 8 bits a hexadecimal</string>
+    <string name="convert_hex_to_bin">Convierte de hexadecimal a binario con 8 bits</string>
+    <string name="hex_correct">Respuesta correcta</string>
+    <string name="hex_wrong">Respuesta incorrecta</string>
 
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
@@ -70,11 +78,8 @@
 
     <!--Coma flotante-->
     <string name="menu_ejercicioComa">Coma Flotante</string>
-    <string name="solution">Solución introducida</string>
     <string name="convert_dec_to_iee">Convierte a formato IEE 754</string>
     <string name="convert_dec_to_iee2">Número decimal</string>
     <string name="convert_iee_to_dec">Convierte de IEE 754 a decimal</string>
     <string name="convert_iee_to_dec2">S    Exp(8 bits)     Mantisa (23 bits)</string>
-    <string name="hex_correct">Respuesta correcta</string>
-    <string name="hex_wrong">Respuesta incorrecta</string>
 </resources>
