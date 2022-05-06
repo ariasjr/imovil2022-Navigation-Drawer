@@ -69,4 +69,9 @@
         android:name="es.imovil.fcrtrainer.ui.digital.ejercicioCircuitosDigitales.FragmentExerciceCircuitosDigitales"
         android:label="Ejercicio Circuitos Digitales"
         tools:layout="@layout/fragment_exercice_circuitos_digitales" />
+    <fragment
+        android:id="@+id/nav_highscore"
+        android:name="es.imovil.fcrtrainer.ui.highscores.HighscoreFragment"
+        android:label="@string/highscores"
+        tools:layout="@layout/fragment_highscore"/>
 </navigation>

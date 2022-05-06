@@ -64,12 +64,21 @@
                 android:id="@+id/network_mask"
                 android:icon="@drawable/ic_nav_network_layer"
                 android:title="Máscara de red"/>
-                android:title="@string/menu_network_layer" />
+            android:title="@string/menu_network_layer" />
             <item
                 android:id="@+id/CIDR"
                 android:title="@string/menu_CIDR"
                 android:icon="@drawable/ic_menu_cidr"/>
         </menu>
     </item>
+    <item android:title="@string/highscores">
+        <menu>
+            <item
+                android:id="@+id/nav_highscore"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/highscores" />
+        </menu>
+    </item>
+
 
 </menu>

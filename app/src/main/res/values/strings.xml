@@ -6,11 +6,13 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="default_user_name">Yo</string>
 
     <string name="menu_ejercicio1">Ejercicio1</string>
     <string name="menu_ejercicio2">Ejercicio2</string>
     <string name="menu_ejercicioN">EjercicioN</string>
     <string name="menu_ejercicioCircuitosDigitales">Ejercicio Circuitos Digitales</string>
+    <string name="menu_puntuacioneslocales">Puntuaciones Locales</string>
 
     <string name="codes">Códigos</string>
     <string name="digital_systems">Digitales</string>
@@ -87,4 +89,6 @@
     <string name="convert_iee_to_dec2">S    Exp(8 bits)     Mantisa (23 bits)</string>
     <string name="enunciadoCD">Introduce la salida S del circuito digital</string>
 
+    <string name="highscores">Puntuaciones</string>
+    <string name="exercise">Ejercicio</string>
 </resources>
