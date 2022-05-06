@@ -6,14 +6,6 @@
     <item android:title="@string/codes">
         <menu>
             <item
-                android:id="@+id/nav_ejercicio1"
-                android:icon="@drawable/ic_menu_codes1"
-                android:title="@string/menu_ejercicio1" />
-            <item
-                android:id="@+id/nav_ejercicio2"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/menu_ejercicio2" />
-            <item
                 android:id="@+id/nav_signed_magnitude"
                 android:icon="@drawable/ic_menu_signed_magnitud"
                 android:title="@string/menu_signed_magnitude" />
@@ -35,10 +27,6 @@
     <item android:title="@string/digital_systems">
         <menu>
             <item
-                android:id="@+id/nav_ejercicioN"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_ejercicioN" />
-            <item
                 android:id="@+id/nav_logicgate"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="@string/puerta_l_gica" />
@@ -46,6 +34,10 @@
                 android:id="@+id/nav_logic_operations"
                 android:icon="@drawable/ic_menu_logic_operations"
                 android:title="@string/menu_logical_operations" />
+            <item
+                android:id="@+id/nav_ejercicio_Circuitos_Digitales"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_ejercicioCircuitosDigitales" />
 
 
         </menu>
@@ -63,8 +55,7 @@
             <item
                 android:id="@+id/network_mask"
                 android:icon="@drawable/ic_nav_network_layer"
-                android:title="Máscara de red"/>
-            android:title="@string/menu_network_layer" />
+                android:title="@string/menu_network_mask" />
             <item
                 android:id="@+id/CIDR"
                 android:title="@string/menu_CIDR"
