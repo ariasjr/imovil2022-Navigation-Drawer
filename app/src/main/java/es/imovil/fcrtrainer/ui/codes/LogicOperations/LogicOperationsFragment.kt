@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import es.imovil.fcrtrainer.databinding.FragmentLogicOperationsBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.math.pow
 
@@ -101,9 +102,11 @@ class LogicOperationsFragment : Fragment(){
     private fun checkSolution(sol:String){
         if(sol=="" || !isCorrect(sol)){
             showAnimationAnswer(false)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_hexadecimal)
         }
         else{
             showAnimationAnswer(true)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_logical_operations)
             createQuestion()
         }
     }

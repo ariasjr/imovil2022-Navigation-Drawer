@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentComaflotanteBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import kotlin.math.pow
 import kotlin.random.Random
 import java.util.Timer
@@ -119,9 +120,11 @@ class ComaFlotante : Fragment() {
     fun setImage(result:Boolean){
         if(result) {
             binding.resultImageView?.setImageResource(R.drawable.ic_correct)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_ejercicioComa)
         }
         else{
             binding.resultImageView?.setImageResource(R.drawable.ic_incorrect)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_ejercicioComa)
         }
     }
 

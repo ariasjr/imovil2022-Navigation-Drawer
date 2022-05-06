@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.NumHostsFragmentBinding
 import es.imovil.fcrtrainer.ui.codes.binario.BinarioFragment
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.math.pow
@@ -128,9 +129,11 @@ class NumHostsFragment : Fragment() {
     fun setImage(result:Boolean){
         if(result) {
             binding.resultImageView?.setImageResource(R.drawable.ic_correct)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_num_hosts)
         }
         else{
             binding.resultImageView?.setImageResource(R.drawable.ic_incorrect)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_num_hosts)
         }
     }
 

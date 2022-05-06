@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.NetworkMaskFragmentBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.math.pow
@@ -112,9 +113,11 @@ class NetworkMaskFragment : Fragment(){
     fun setImage(result:Boolean){
         if(result) {
             binding.resultImageView?.setImageResource(R.drawable.ic_correct)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_network_mask)
         }
         else{
             binding.resultImageView?.setImageResource(R.drawable.ic_incorrect)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_network_mask)
         }
     }
 

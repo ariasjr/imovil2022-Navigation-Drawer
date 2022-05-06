@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentHexadecimalBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import kotlin.math.pow
 import kotlin.random.Random
 
@@ -59,11 +60,13 @@ class HexadecimalFragment : Fragment() {
                 val alertDialogBuilder = AlertDialog.Builder(it.context)
                 if (isCorrect(answer.text.toString())){
                     alertDialogBuilder.setMessage(resources.getString(R.string.hex_correct)).show()
+                    HighscoreManager.addPoint(requireContext(), R.string.menu_hexadecimal)
                     textView.text = generateRandomNumber()
                     answer.text = ""
                     solutionTextView.text = ""
                 } else {
                     alertDialogBuilder.setMessage(resources.getString(R.string.hex_wrong)).show()
+                    HighscoreManager.remPoint(requireContext(), R.string.menu_hexadecimal)
 
                 }
             }

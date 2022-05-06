@@ -9,6 +9,7 @@ import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentNetworkLayerBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.random.Random
@@ -128,9 +129,11 @@ class NetworkLayerFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
     private fun setImage(result:Boolean){
         if(result) {
             binding.resultImageView?.setImageResource(R.drawable.ic_correct)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_network_layer)
         }
         else{
             binding.resultImageView?.setImageResource(R.drawable.ic_incorrect)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_network_layer)
         }
     }
 

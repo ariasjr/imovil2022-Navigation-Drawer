@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentTwosComplementBinding
 import es.imovil.fcrtrainer.ui.codes.hexadecimal.HexadecimalFragment
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.math.pow
 import kotlin.properties.Delegates
@@ -89,9 +90,11 @@ class TwosComplementFragment : Fragment() {
     private fun checkSolution(answer: String) {
         if (answer == "" || !isCorrect(answer)) {
             Toast.makeText(context, "Respuesta INCORRECTA", Toast.LENGTH_SHORT).show()
+            HighscoreManager.remPoint(requireContext(), R.string.twos_complement)
         } else {
             // Correct answer
             Toast.makeText(context, "Respuesta CORRECTA", Toast.LENGTH_SHORT).show()
+            HighscoreManager.addPoint(requireContext(), R.string.twos_complement)
             newQuestion()
         }
     }

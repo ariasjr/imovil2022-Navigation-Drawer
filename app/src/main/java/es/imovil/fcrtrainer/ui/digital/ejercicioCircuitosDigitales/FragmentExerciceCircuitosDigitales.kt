@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentExerciceCircuitosDigitalesBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.random.Random
@@ -182,8 +183,10 @@ class FragmentExerciceCircuitosDigitales : Fragment() {
     fun solucion(s:Boolean){
         if(s){
             binding.solucion.setImageResource(R.drawable.ic_correct)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_ejercicioCircuitosDigitales)
         }else{
             binding.solucion.setImageResource(R.drawable.ic_incorrect)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_ejercicioCircuitosDigitales)
         }
         val resultado:ImageView = binding.solucion
         resultado.visibility=View.VISIBLE

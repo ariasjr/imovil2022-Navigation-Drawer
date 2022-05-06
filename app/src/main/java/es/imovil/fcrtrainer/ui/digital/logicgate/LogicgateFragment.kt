@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentLogicgateBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.random.Random as Random
@@ -269,9 +270,11 @@ class LogicgateFragment : Fragment() {
     fun setImage(result:Boolean){
         if(result) {
             binding.imageSolution.setImageResource(R.drawable.ic_correct)
+            HighscoreManager.addPoint(requireContext(), R.string.puerta_l_gica)
         }
         else{
             binding.imageSolution.setImageResource(R.drawable.ic_incorrect)
+            HighscoreManager.remPoint(requireContext(), R.string.puerta_l_gica)
         }
     }
 

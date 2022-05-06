@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import es.imovil.fcrtrainer.R
 import es.imovil.fcrtrainer.databinding.FragmentSignedMagnitudeBinding
+import es.imovil.fcrtrainer.ui.highscores.HighscoreManager
 import java.util.*
 import kotlin.math.pow
 
@@ -135,8 +136,10 @@ class SignedMagnitudeFragment : Fragment() {
     private fun checkSolution(answer: String) {
         if (answer == "" || !isCorrect(answer)) {
             showAnimationAnswer(false)
+            HighscoreManager.remPoint(requireContext(), R.string.menu_signed_magnitude)
         } else {
             showAnimationAnswer(true)
+            HighscoreManager.addPoint(requireContext(), R.string.menu_signed_magnitude)
             newQuestion()
         }
     }
