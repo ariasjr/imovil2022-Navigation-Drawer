@@ -6,31 +6,70 @@
     <item android:title="@string/codes">
         <menu>
             <item
-                android:id="@+id/nav_ejercicio1"
-                android:icon="@drawable/ic_menu_codes1"
-                android:title="@string/menu_ejercicio1" />
+                android:id="@+id/nav_signed_magnitude"
+                android:icon="@drawable/ic_menu_signed_magnitud"
+                android:title="@string/menu_signed_magnitude" />
             <item
-                android:id="@+id/nav_ejercicio2"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/menu_ejercicio2" />
+                android:id="@+id/nav_hexadecimal"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/menu_hexadecimal" />
             <item
                 android:id="@+id/nav_ejercicioBinario"
                 android:icon="@drawable/ic_menu_codes1"
                 android:title="@string/menu_binario" />
+            <item
+                android:id="@+id/nav_twos_complement"
+                android:icon="@drawable/ic_menu_codes1"
+                android:title="@string/twos_complement" />
 
         </menu>
     </item>
     <item android:title="@string/digital_systems">
         <menu>
             <item
-                android:id="@+id/nav_ejercicioN"
+                android:id="@+id/nav_logicgate"
                 android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_ejercicioN" />
+                android:title="@string/puerta_l_gica" />
+            <item
+                android:id="@+id/nav_logic_operations"
+                android:icon="@drawable/ic_menu_logic_operations"
+                android:title="@string/menu_logical_operations" />
+            <item
+                android:id="@+id/nav_ejercicio_Circuitos_Digitales"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_ejercicioCircuitosDigitales" />
 
 
         </menu>
     </item>
-    <item android:title="@string/network"/>
+    <item android:title="@string/network">
+        <menu>
+            <item
+                android:id="@+id/nav_NumHosts"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/menu_num_hosts" />
+            <item
+                android:id="@+id/nav_network_layer"
+                android:icon="@drawable/ic_nav_network_layer"
+                android:title="@string/layer_exercise"/>
+            <item
+                android:id="@+id/network_mask"
+                android:icon="@drawable/ic_nav_network_layer"
+                android:title="@string/menu_network_mask" />
+            <item
+                android:id="@+id/CIDR"
+                android:title="@string/menu_CIDR"
+                android:icon="@drawable/ic_menu_cidr"/>
+        </menu>
+    </item>
+    <item android:title="@string/highscores">
+        <menu>
+            <item
+                android:id="@+id/nav_highscore"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/highscores" />
+        </menu>
+    </item>
 
 
 </menu>
